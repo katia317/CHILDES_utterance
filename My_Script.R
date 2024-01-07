@@ -1,6 +1,5 @@
-install.packages("tidyverse")
+options(repos = c(CRAN = "https://cran.rstudio.com"))
 library(tidyverse)
-install.packages("papaja")
 library(papaja)
 library(ggplot2)
 
