@@ -12,15 +12,18 @@ Gender-biased noun. Nouns extracted from the two lists “Top 10 most female/mal
 Competence and warmth adjectives. Based on the SCM’s categorization (2008), warmth scales include “good‐natured”, “trustworthy”, “tolerant”, “friendly”, and “sincere”, whereas competence scales include “capable”, “skillful”, “intelligent”, and “confident”.
 
 ## File Tree
-project/
-│
-├── README.md
-├── data/
-│   ├── data_file1.csv
-│   └── data_file2.csv
-├── docs/
-│   ├── report.md
-│   └── summary.md
-└── src/
-    ├── script1.py
-    └── script2.py
+project/  
+│  
+├── README.md   
+├── scripts/  
+│   └── My_Script.R  
+└── notebook/  
+|   └── My_Notebook.Rmd  
+└── data_file/   
+    └── Dataset_Providence  
+        ├── Alex  
+        ├── Ethan  
+        ├── Lily  
+        ├── Naima  
+        ├── Violet  
+        └── William  
