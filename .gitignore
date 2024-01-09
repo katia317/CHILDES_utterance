@@ -2,6 +2,16 @@
 .Rhistory
 .Rapp.history
 
+# Ignore localonly directory
+localonly/
+
+# Ignore specific file types
+*.log
+*.tmp
+
+# Ignore a specific file
+D2M/git_cheat_sheet.pdf
+
 # Session Data files
 .RData
 .RDataTmp
