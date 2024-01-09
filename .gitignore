@@ -10,7 +10,7 @@ localonly/
 *.tmp
 
 # Ignore a specific file
-D2M/git_cheat_sheet.pdf
+/Users/katia/Desktop/D2M/CHILDES_utterance/r-references.bib
 
 # Session Data files
 .RData
