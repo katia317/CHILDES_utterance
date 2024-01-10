@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # CHILDES_utterance
 Class (public) repo for Data to Manuscript in R
 
@@ -14,16 +19,17 @@ Competence and warmth adjectives. Based on the SCM’s categorization (2008), wa
 ## File Tree
 project/  
 │  
-├── README.md   
+├── README.md  
 ├── scripts/  
 │   └── My_Script.R  
-└── notebook/  
-|   └── My_Notebook.Rmd  
-└── data_file/   
-    └── Dataset_Providence  
+├── notebook/  
+│   └── My_Notebook.Rmd  
+└── data_file/  
+    └── Dataset_Providence/  
         ├── Alex  
         ├── Ethan  
         ├── Lily  
         ├── Naima  
         ├── Violet  
         └── William  
+ 
