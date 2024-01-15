@@ -1,13 +1,13 @@
 ---
 title             : "My Notebook"
-shorttitle        : "Title"
+shorttitle        : "from D2M course"
 
 author: 
   - name          : "Katia Yang"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
     address       : "Postal address"
-    email         : "my@email.com"
+    email         : "kaiweny@uchicago.edu"
     role: # Contributorship roles (e.g., CRediT, https://credit.niso.org/)
       - "Conceptualization"
       - "Writing - Original Draft Preparation"
@@ -16,8 +16,6 @@ author:
 affiliation:
   - id            : "1"
     institution   : "University of Chicago"
-  - id            : "2"
-    institution   : ""
 
 authornote: |
   Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
@@ -50,10 +48,25 @@ tablelist         : no
 footnotelist      : no
 
 classoption       : "man"
-output            : papaja::apa6_pdf
+output            : html_document
 ---
+
 ```{r source-script}
 source("My_Script.R")
+```
+
+<!-- Assignment 5 -->
+
+```{r call-function}
+# Call the hello_world function
+result1 <- hello_world("Dr.Dowling")
+result2 <- hello_world("Voldemort")
+result3 <- hello_world("Wubalubadubdub")
+
+# Print the results
+print(result1)
+print(result2)
+print(result3)
 ```
 
 ```{r setup, include = FALSE}
@@ -67,25 +80,51 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
-
-
 # Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+### dataset
+
+PROVIDENCE CORPUS from the **CHILDES** URL:[<https://phon.talkbank.org/access/Eng-NA/Providence.html>]
+
+## Material
 
 ## Participants
 
-## Material
+Participants including *6 children*:   
+
+1. Alex  
+   a. Alex's mother
+2. Violet  
+   a. Violet's father
+3. Naima  
+4. Lily  
+5. William  
+6. Ethan  
+
+<!-- I don't know what to write --> 
+And these characters: 
+
+* Adventure Time
+  - Finn
+  - Jack
+  - Princess Bubblegum
+  - Ice King
+* Rick and Morty
+  - Rick
+  - Morty
+    + Morty 233
+    + Morty 167
+  - Summer
 
 ## Procedure
 
 ## Data analysis
-We used `r cite_r("r-references.bib")` for all our analyses.
 
+We used `r cite_r("r-references.bib")` for all our analyses.
 
 # Results
 
 # Discussion
-
 
 \newpage
 
