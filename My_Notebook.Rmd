@@ -107,6 +107,7 @@ And these characters:
 * Adventure Time
   - Finn
   - Jack
+  - BMO
   - Princess Bubblegum
   - Ice King
 * Rick and Morty
