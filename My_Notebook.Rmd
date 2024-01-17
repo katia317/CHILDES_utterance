@@ -74,16 +74,47 @@ library("papaja")
 r_refs("r-references.bib")
 ```
 
-```{r analysis-preferences}
-# Seed for random number generation
-set.seed(42)
-knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
-```
 
 # Methods
 
 ### dataset
 
+```{r read in data}
+library(readr)
+library(dplyr)
+library(magrittr)
+# data files read-in
+alex.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Alex.csv")
+ethan.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Ethan.csv")
+lily.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Lily.csv")
+naima.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Naima.csv")
+william.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/William.csv")
+violet.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Violet.csv")
+# select only mother's utterances
+alex.tidydata <- alex.data %>% 
+  filter(Role == "Mother") %>% 
+  select(Utterance)
+
+ethan.tidydata <- ethan.data %>% 
+  filter(Role == "Mother") %>% 
+  select(Utterance)
+
+lily.tidydata <- lily.data %>% 
+  filter(Role == "Mother") %>% 
+  select(Utterance)
+
+naima.tidydata <- naima.data %>% 
+  filter(Role == "Mother") %>% 
+  select(Utterance)
+
+william.tidydata <- william.data %>% 
+  filter(Role == "Mother") %>% 
+  select(Utterance)
+
+violet.tidydata <- violet.data %>% 
+  filter(Role == "Mother") %>% 
+  select(Utterance)
+```
 PROVIDENCE CORPUS from the **CHILDES** URL:[<https://phon.talkbank.org/access/Eng-NA/Providence.html>]
 
 ## Material
