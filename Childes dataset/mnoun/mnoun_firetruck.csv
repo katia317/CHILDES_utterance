@@ -1,0 +1,4 @@
+"gloss","target_child_name","part_of_speech","target_child_sex"
+"who where'd did you get sit in a firetruck",NA,"pro:int pro:rel mod pro:per v v prep det:art","male"
+"the red ones red lights are on ambulance and on a firetruck",NA,"det:art n n adj n cop prep n coord prep det:art","male"
+"lights are on firetrucks",NA,"n cop prep","male"
