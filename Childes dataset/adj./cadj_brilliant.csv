@@ -1,3 +1,3 @@
-"gloss","target_child_name","part_of_speech","target_child_sex"
-"a brilliant",NA,"det:art adj","male"
-"the water was a brilliant shade of turquoise and dolphins leapt in and out of the water as if they were dancing",NA,"det:art n cop det:art adj n prep n coord n v adv coord adv prep det:art n prep conj pro:sub aux part","female"
+"corpus_name","gloss","target_child_name","target_child_age","target_child_sex","part_of_speech"
+"Providence","a brilliant","Ethan",28.6248177580648,"male","det:art adj"
+"Providence","the water was a brilliant shade of turquoise and dolphins leapt in and out of the water as if they were dancing","Lily",30.132035565412,"female","det:art n cop det:art adj n prep n coord n v adv coord adv prep det:art n prep conj pro:sub aux part"

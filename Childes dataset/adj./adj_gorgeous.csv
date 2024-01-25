@@ -1,0 +1,5 @@
+"corpus_name","gloss","target_child_name","target_child_age","target_child_sex","part_of_speech"
+"Providence","what a shame there are no other creatures as gorgeous and lovely as me","Alex",18.46033799462,"male","pro:int det:art n adv cop qn qn n adv adj coord adj prep pro:obj"
+"Providence","a coach and yyy Cinderella's rags into a gorgeous gown","Lily",28.0662847286392,"female","det:art n coord adj n prep det:art adj n"
+"Providence","with a wave of her magic wand the fairy godmother turned a pumpkin into a coach and Cinderella's rags into a gorgeous gown","Lily",32.6248998952751,"female","prep det:art n prep det:poss adj n det:art n v det:art n prep det:art n coord adj n prep det:art adj n"
+"Providence","hi gorgeous girl","Violet",20.723218135896,"female","co adj n"
