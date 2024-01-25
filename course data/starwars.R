@@ -4,7 +4,7 @@ library(dplyr)
 ## Create your goal tibble to replicate
 
 # Run this line to see what your end product should look like
-sw.wrangled.goal <- read_csv("/Users/katia/Desktop/D2M/course data/sw-wrangled.csv") %>% 
+sw.wrangled.goal <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/course data/sw-wrangled.csv") %>% 
   mutate(across(c(hair, gender, species, homeworld), factor)) # this is a quick-and-dirty fix to account for odd importing behavior
 
 # View in console
