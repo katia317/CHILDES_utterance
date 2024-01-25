@@ -6,31 +6,31 @@ library(childesr)
 # Total: 6 Corpuses, 58 children
 # Providence Corpus, 6 children (3 girls, 3 boys)
 pro <- get_utterances(role = "Mother", age = c(12,36), corpus = "Providence")
-pro_utterance <- select(pro, gloss, target_child_sex, part_of_speech)
+pro_utterance <- select(pro, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
 
 # Gleason Corpus, 7 children (3 girls, 4 boys)
 # Laurel, Martin, Nanette, Patricia, Richard, Victor, William
 gleason <- get_utterances(role = "Mother", age = c(12,36), corpus = "Gleason")
-gle_utterance <- select(gleason, gloss, target_child_sex, part_of_speech)
+gle_utterance <- select(gleason, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
 
 # McCune Corpus, 10 children
 mcc <- get_utterances(role = "Mother", age = c(12,36), corpus = "McCune")
-mcc_utterance <- select(mcc, gloss, target_child_sex, part_of_speech)
+mcc_utterance <- select(mcc, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
 
 # Warren Corpus, 9 children (4 girls, 5 boys)
 warren <- get_utterances(role = "Mother", age = c(12,36), corpus = "Warren")
-wr_utterance <- select(warren, gloss, target_child_sex, part_of_speech)
+wr_utterance <- select(warren, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
 
-# Davis Corpus, 20 children (9 girls, 11 boys)
-davis <- get_utterances(role = "Mother", age = c(12,36), corpus = "Davis")
-dv_utterance <- select(davis, gloss, target_child_sex, part_of_speech)
+# VanHouten Corpus, 20 children (8 girls, 12 boys)
+van <- get_utterances(role = "Mother", age = c(12,36), corpus = "VanHouten")
+van_utterance <- select(van, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
 
 # Weist Corpus, 6 children (3 girls, 3 boys)
 weist <- get_utterances(role = "Mother", age = c(12,36), corpus = "Weist")
-wst_utterance <- select(weist, gloss, target_child_name, part_of_speech)
+wst_utterance <- select(weist, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
 
 # combined utterance
-combined_utterance <- bind_rows(wst_utterance, dv_utterance, wr_utterance,
+combined_utterance <- bind_rows(wst_utterance, van_utterance, wr_utterance,
                                 mcc_utterance, gle_utterance, pro_utterance)
 
 # filter utterances that include adj.
@@ -45,25 +45,34 @@ noun_utterance <- combined_utterance %>%
 write.csv(adj_utterance, file = "adj_utterance.csv", row.names = FALSE)
 write.csv(noun_utterance, file = "noun_utterance.csv", row.names = FALSE)
 
-# data files read-in
-adj_utterance <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj_utterance.csv")
-noun_utterance <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/noun_utterance.csv")
+# tidied data files read-in
+adj_utterance <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy_adj_utterance.csv")
+noun_utterance <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy_noun_utterance.csv")
 
 # female adj. utterance
 adj_female <- adj_utterance %>% 
   filter(grepl("female", target_child_sex))
 write.csv(adj_female, file = "adj_female.csv", row.names = FALSE)
-## female adj. utterance:  29,322 obs.
-##   male adj. utterance:  16,972 obs.
 
+table(adj_utterance$target_child_sex)
+## female adj. utterance:  29,498 obs.
+##   male adj. utterance:  17,161 obs.
 
 # female noun. utterance
 n_female <- noun_utterance %>% 
   filter(grepl("female", target_child_sex))
 write.csv(n_female, file = "n_female.csv", row.names = FALSE)
-## female noun. utterance:  97,696 obs.
-##   male noun. utterance:  70,408 obs.
 
+table(noun_utterance$target_child_sex)
+## female noun. utterance:  98,396 obs.
+##   male noun. utterance:  70,543 obs.
+
+# check for NAs
+which(is.na(adj_utterance$target_child_sex))
+which(is.na(adj_utterance$target_child_name))
+
+# what if the columns are blank??
+adj_importNA <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj_utterance.csv", na = " ")
 
 # female biased nouns: dress, doll, necklace, purse, baby, sweater, girl
 
@@ -194,4 +203,8 @@ adj_lovely <- adj_utterance %>%
   filter(grepl("lovely", gloss))
 write.csv(adj_lovely, file = "adj_lovely.csv", row.names = FALSE)
 
+## gorgeous
+adj_gorgeous <- adj_utterance %>% 
+  filter(grepl("gorgeous", gloss))
+write.csv(adj_gorgeous, file = "adj_gorgeous.csv", row.names = FALSE)
 
