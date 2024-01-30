@@ -79,41 +79,6 @@ r_refs("r-references.bib")
 
 ### dataset
 
-```{r read in data}
-library(readr)
-library(dplyr)
-library(magrittr)
-# data files read-in
-alex.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Alex.csv")
-ethan.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Ethan.csv")
-lily.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Lily.csv")
-naima.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Naima.csv")
-william.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/William.csv")
-violet.data <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_data/Violet.csv")
-# select only mother's utterances
-alex.tidydata <- alex.data %>% 
-  filter(Role == "Mother") %>% 
-  select(Utterance)
-
-ethan.tidydata <- ethan.data %>% 
-  filter(Role == "Mother") %>% 
-  select(Utterance)
-
-lily.tidydata <- lily.data %>% 
-  filter(Role == "Mother") %>% 
-  select(Utterance)
-
-naima.tidydata <- naima.data %>% 
-  filter(Role == "Mother") %>% 
-  select(Utterance)
-
-william.tidydata <- william.data %>% 
-  filter(Role == "Mother") %>% 
-  select(Utterance)
-
-violet.tidydata <- violet.data %>% 
-  filter(Role == "Mother") %>% 
-  select(Utterance)
 ```
 PROVIDENCE CORPUS from the **CHILDES** URL:[<https://phon.talkbank.org/access/Eng-NA/Providence.html>]
 
@@ -151,9 +116,50 @@ And these characters:
 ## Procedure
 
 ## Data analysis
+### Assignment (10)
+### 10.1
+```{r mock up female biased nouns plots}
+library(ggplot2)
+install.packages("reshape2")
+library(reshape2)
 
-We used `r cite_r("r-references.bib")` for all our analyses.
+data <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy data/counts_fnouns.csv")
 
+long_data <- melt(data, id.vars = "gloss")
+
+ggplot(long_data, aes(x = gloss, y = value, fill = variable)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme_minimal() +
+  labs(x = "Word", y = "Count", fill = "Gender",
+       title = "Frequency of Female Gender-biased Nouns",
+       subtitle = "Comparing the frequency of gender-biased maternal CDS between female and male infants") +
+  scale_fill_manual(values = c("female" = "pink", "male" = "lightblue"))
+
+# X-axis: The gloss variable, representing different words (like "dress", "doll", "necklace", etc.).
+# Y-axis: The count or frequency of each word, indicating how often each word appears in the dataset.
+# Type of Plot: Bar Chart. 
+# Comparison Across Groups?: Yes
+# Anticipated Findings: mothers speak more female-biased nouns to female infants than to male infants
+```
+###10.2
+```{r mock up appearance-related adj.s}
+app.data <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy data/final_app_adj.csv")
+
+ggplot(data, aes(x = female, y = male, label = gloss)) +
+  geom_point() +  
+  geom_text(vjust = -1) +  
+  theme_minimal() + 
+  labs(x = "Female", y = "Male",
+  title = "Frequency of Appearance-related Adj.",
+  subtitle = "Comparing the frequency of gender-biased maternal CDS between female and male infants")
+
+# X-axis: counts of frequency of appearance-related adj. spoken to female infants
+# Y-axis: counts of frequency of appearance-related adj. spoken to male infants
+# Type of Plot: Scatter Chart. (*I think Bar Chart suits better*)
+# Comparison Across Groups?: Yes
+# Anticipated Findings: mothers speak more appearance-related adj. to female infants than to male infants
+
+```
 # Results
 
 # Discussion
