@@ -210,7 +210,8 @@ adj_gorgeous <- adj_utterance %>%
 write.csv(adj_gorgeous, file = "adj_gorgeous.csv", row.names = FALSE)
 
 
-# set working directory of all female-biased nouns
+## Assignment (9)
+# 9.1 set working directory of all female-biased nouns
 setwd("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/fnoun")
 
 files <- list.files(pattern="*.csv")
@@ -229,7 +230,7 @@ write.csv(all_fnouns, "combined_fnouns.csv", row.names = FALSE)
 
 library(tidyr)
 
-# calculating numbers of each female biased noun in "gloss"
+# calculating numbers of each male biased noun in "gloss"
 number_fnoun <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/combined_fnouns.csv")
 fnoun_words <- c("dress", "doll", "necklace", "purse", "baby", "sweater", "girl")
 word_counts <- number_fnoun %>%
@@ -242,4 +243,32 @@ final_data <- pivot_wider(word_counts, names_from = target_child_sex, values_fro
 # tidy data of female-biased nouns
 write.csv(final_data, "counts_fnouns.csv", row.names = FALSE)
 
-# male biased nouns: hammer, truck, firetruck, broom, shovel, motorcycle, train
+# 9.2 set working directory of all female-biased nouns
+setwd("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/mnoun")
+
+files <- list.files(pattern="*.csv")
+
+all_mnouns <- data.frame()
+
+## extracting "gloss" and "target_child_sex" from all mnoun files
+for(file in files) {
+  temp_data <- read.csv(file)
+  selected_data <- temp_data %>%
+    select(gloss, target_child_sex)
+  all_mnouns <- rbind(all_mnouns, selected_data)
+}
+
+write.csv(all_mnouns, "combined_mnouns.csv", row.names = FALSE)
+
+# calculating numbers of each male biased noun in "gloss"
+number_mnoun <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/combined_mnouns.csv")
+mnoun_words <- c("hammer", "truck", "firetruck", "broom", "shovel", "motorcycle", "train")
+word_counts <- number_mnoun %>%
+  mutate(gloss = tolower(gloss)) %>%
+  separate_rows(gloss, sep = "\\s+") %>%
+  filter(gloss %in% mnoun_words) %>%
+  count(gloss, target_child_sex)
+final_mdata <- pivot_wider(word_counts, names_from = target_child_sex, values_from = n, values_fill = list(n = 0))
+
+# tidy data of male-biased nouns
+write.csv(final_mdata, "counts_mnouns.csv", row.names = FALSE)
