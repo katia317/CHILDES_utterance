@@ -272,3 +272,63 @@ final_mdata <- pivot_wider(word_counts, names_from = target_child_sex, values_fr
 
 # tidy data of male-biased nouns
 write.csv(final_mdata, "counts_mnouns.csv", row.names = FALSE)
+
+# 9.3 set working directory of all appearance-related adjs
+setwd("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj./appearance adj")
+
+files <- list.files(pattern="*.csv")
+
+all_app_adj <- data.frame()
+
+## extracting "gloss" and "target_child_sex" from all appearance adj. files
+for(file in files) {
+  temp_data <- read.csv(file)
+  selected_data <- temp_data %>%
+    select(gloss, target_child_sex)
+  all_app_adj <- rbind(all_app_adj, selected_data)
+}
+
+write.csv(all_app_adj, "all_app_adj.csv", row.names = FALSE)
+
+# calculating numbers of each app adj. in "gloss"
+number_app_adj <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj./all_app_adj.csv")
+app_adj <- c("beautiful","cute","gorgeous","handsome","lovely","pretty")
+word_counts <- number_app_adj %>%
+  mutate(gloss = tolower(gloss)) %>%
+  separate_rows(gloss, sep = "\\s+") %>%
+  filter(gloss %in% app_adj) %>%
+  count(gloss, target_child_sex)
+final_app_adj <- pivot_wider(word_counts, names_from = target_child_sex, values_from = n, values_fill = list(n = 0))
+
+# tidy data of male-biased nouns
+write.csv(final_app_adj, "final_app_adj.csv", row.names = FALSE)
+
+# 9.4 set working directory of all competence-related adjs
+setwd("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj./competence adj")
+
+files <- list.files(pattern="*.csv")
+
+all_com_adj <- data.frame()
+
+## extracting "gloss" and "target_child_sex" from all appearance adj. files
+for(file in files) {
+  temp_data <- read.csv(file)
+  selected_data <- temp_data %>%
+    select(gloss, target_child_sex)
+  all_com_adj <- rbind(all_com_adj, selected_data)
+}
+
+write.csv(all_com_adj, "all_com_adj.csv", row.names = FALSE)
+
+# calculating numbers of each com adj. in "gloss"
+number_com_adj <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj./all_com_adj.csv")
+com_adj <- c("clever","brilliant","smart","strong")
+word_counts <- number_com_adj %>%
+  mutate(gloss = tolower(gloss)) %>%
+  separate_rows(gloss, sep = "\\s+") %>%
+  filter(gloss %in% com_adj) %>%
+  count(gloss, target_child_sex)
+final_com_adj <- pivot_wider(word_counts, names_from = target_child_sex, values_from = n, values_fill = list(n = 0))
+
+# tidy data of male-biased nouns
+write.csv(final_com_adj, "final_com_adj.csv", row.names = FALSE)
