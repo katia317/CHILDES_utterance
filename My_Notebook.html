@@ -387,19 +387,6 @@ display: none;
 </address>
 <div class="abstract">
 <p class="abstract">Abstract</p>
-<p>One or two sentences providing a <strong>basic introduction</strong>
-to the field, comprehensible to a scientist in any discipline. Two to
-three sentences of <strong>more detailed background</strong>,
-comprehensible to scientists in related disciplines. One sentence
-clearly stating the <strong>general problem</strong> being addressed by
-this particular study. One sentence summarizing the main result (with
-the words “<strong>here we show</strong>” or their equivalent). Two or
-three sentences explaining what the <strong>main result</strong> reveals
-in direct comparison to what was thought to be the case previously, or
-how the main result adds to previous knowledge. One or two sentences to
-put the results into a more <strong>general context</strong>. Two or
-three sentences to provide a <strong>broader perspective</strong>,
-readily comprehensible to a scientist in any discipline.</p>
 <!-- https://tinyurl.com/ybremelq -->
 </div>
 
@@ -435,7 +422,8 @@ print(result1)</code></pre>
 <h1>Methods</h1>
 <div id="dataset" class="section level3">
 <h3>dataset</h3>
-<pre><code>PROVIDENCE CORPUS from the **CHILDES** URL:[&lt;https://phon.talkbank.org/access/Eng-NA/Providence.html&gt;]
+<pre><code>6 Corpuses from the **CHILDES** 
+URL:[&lt;https://childes.talkbank.org/&gt;]
 
 ## Material
 
@@ -472,14 +460,14 @@ And these characters:
 
 ## Data analysis
 ### Assignment (10)
-
+### 10.1
 
 ```r
 library(ggplot2)
 install.packages(&quot;reshape2&quot;)</code></pre>
 <pre><code>## 
 ## The downloaded binary packages are in
-##  /var/folders/3s/kh20qg9n55s77xtbj7v86w900000gn/T//RtmpbIBruR/downloaded_packages</code></pre>
+##  /var/folders/3s/kh20qg9n55s77xtbj7v86w900000gn/T//RtmpG1sHzH/downloaded_packages</code></pre>
 <pre class="r"><code>library(reshape2)</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;reshape2&#39;</code></pre>
@@ -503,6 +491,7 @@ ggplot(long_data, aes(x = gloss, y = value, fill = variable)) +
 # Type of Plot: Bar Chart. 
 # Comparison Across Groups?: Yes
 # Anticipated Findings: mothers speak more female-biased nouns to female infants than to male infants</code></pre>
+<p>###10.2</p>
 <pre class="r"><code>app.data &lt;- read.csv(&quot;/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy data/final_app_adj.csv&quot;)
 
 ggplot(data, aes(x = female, y = male, label = gloss)) +

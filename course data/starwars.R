@@ -42,5 +42,25 @@ sw.wrangled <- sw.wrangled %>%
 write_csv(sw.wrangled,"sw.wrangled.csv")
 
 ## Check that your sw.wrangled df is identical to the goal df
-# Use any returned information about mismatches to adjust your code as needed
 all.equal(sw.wrangled.goal, sw.wrangled)
+
+# Assignmengt 11.1
+
+library(ggplot2)
+
+# the histogram PLOT 1
+ggplot(sw.wrangled, aes(x = height_cm)) +
+  geom_histogram(binwidth = 10) +
+  labs(x = "height_cm", y = "count")
+
+# the bar chart PLOT 2
+ggplot(sw.wrangled, aes(x = reorder(hair, -table(hair)[hair]))) +
+  geom_bar() +
+  labs(x = "sorted_hair", y = "count")
+
+# the point chart PLOT 3
+filtered_sw <- sw.wrangled %>% filter(mass <= 300)
+ggplot(filtered_sw, aes(x = height_in, y = mass)) +
+  geom_point(shape = 17)
+  labs(x = "height_in", y = "mass")
+
