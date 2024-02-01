@@ -23,13 +23,6 @@ authornote: |
   Enter author note here.
 
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  One or two sentences to put the results into a more **general context**.
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
   
   <!-- https://tinyurl.com/ybremelq -->
   
@@ -80,14 +73,14 @@ r_refs("r-references.bib")
 ### dataset
 
 ```
-PROVIDENCE CORPUS from the **CHILDES** URL:[<https://phon.talkbank.org/access/Eng-NA/Providence.html>]
+6 Corpuses from the **CHILDES** 
+URL:[<https://childes.talkbank.org/>]
 
 ## Material
 
 ## Participants
 
 Participants including *6 children*:   
-
 1. Alex  
    a. Alex's mother
 2. Violet  
@@ -119,6 +112,7 @@ And these characters:
 ### Assignment (10)
 ### 10.1
 ```{r mock up female biased nouns plots}
+
 library(ggplot2)
 install.packages("reshape2")
 library(reshape2)
@@ -142,22 +136,22 @@ ggplot(long_data, aes(x = gloss, y = value, fill = variable)) +
 # Anticipated Findings: mothers speak more female-biased nouns to female infants than to male infants
 ```
 ###10.2
-```{r mock up appearance-related adj.s}
-app.data <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy data/final_app_adj.csv")
+```{r mock up Female-biased Nouns Plot}
 
-ggplot(data, aes(x = female, y = male, label = gloss)) +
-  geom_point() +  
-  geom_text(vjust = -1) +  
-  theme_minimal() + 
-  labs(x = "Female", y = "Male",
-  title = "Frequency of Appearance-related Adj.",
-  subtitle = "Comparing the frequency of gender-biased maternal CDS between female and male infants")
+proportion_fnoun <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/fnoun_number_proportions.csv")
 
-# X-axis: counts of frequency of appearance-related adj. spoken to female infants
-# Y-axis: counts of frequency of appearance-related adj. spoken to male infants
-# Type of Plot: Scatter Chart. (*I think Bar Chart suits better*)
+ggplot(proportion_fnoun, aes(x = target_child_sex, y = fnoun_proportion, fill = target_child_sex)) +
+  geom_boxplot(alpha = 0.5) +
+  scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
+  labs(x = "Gender", y = "Proportion", title = "Female-Biased Noun Proportion") +
+  theme_minimal()
+
+# X-axis: female/male infants
+# Y-axis: counts of frequency of female-biased nouns
+# Type of Plot: box plot
 # Comparison Across Groups?: Yes
-# Anticipated Findings: mothers speak more appearance-related adj. to female infants than to male infants
+# Anticipated Findings: mothers speak more female-biased nouns in CDS to female infants than to male infants
+# I may add another layer of point chart on the plot, showing data of each child
 
 ```
 # Results

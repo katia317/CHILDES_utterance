@@ -47,8 +47,9 @@ all.equal(sw.wrangled.goal, sw.wrangled)
 # Assignmengt 11.1
 
 library(ggplot2)
-
+# Assignment 11.1
 # the histogram PLOT 1
+sw.wrangled <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/course data/sw.wrangled.csv")
 ggplot(sw.wrangled, aes(x = height_cm)) +
   geom_histogram(binwidth = 10) +
   labs(x = "height_cm", y = "count")
