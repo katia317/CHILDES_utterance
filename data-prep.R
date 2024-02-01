@@ -332,3 +332,57 @@ final_com_adj <- pivot_wider(word_counts, names_from = target_child_sex, values_
 
 # tidy data of male-biased nouns
 write.csv(final_com_adj, "final_com_adj.csv", row.names = FALSE)
+
+## *NEW:Appearance Related Adj.s Proportion*
+library(dplyr)
+
+# read data
+appearance_adj_number <- read.csv('/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy_adj_utterance.csv')
+
+# Define words that refer to the appearance description
+appearance_words <- c("handsome", "gorgeous", "beautiful", "lovely", "cute")
+
+# Filter gloss that contains the specified word
+filtered_appearance <- appearance_adj_number %>% 
+  filter(sapply(appearance_words, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
+
+grouped_adj_number <- filtered_appearance %>%
+  group_by(target_child_name) %>%
+  summarise(gloss_count = n())
+
+write.csv(grouped_adj_number, '/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/without_pretty_adj_number.csv', row.names = FALSE)
+
+
+# PLOT
+library(ggplot2)
+proportion_appearance <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/adj_number_proportions.csv")
+ggplot(proportion_appearance, aes(x = target_child_sex, y = appearance_proportion, fill = target_child_sex)) +
+  geom_boxplot(alpha = 0.5) +
+  scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
+  coord_cartesian(ylim = c(0, 0.1)) +
+  labs(x = "Gender", y = "Proportion", title = "Appearance Related Adj. Proportion") +
+  theme_minimal()
+
+ggplot(proportion_appearance, aes(x = target_child_sex, y = without_pretty_proportion, fill = target_child_sex)) +
+  geom_boxplot(alpha = 0.5) +
+  scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
+  labs(x = "Gender", y = "Proportion", title = "Without Pretty Proportion") +
+  theme_minimal()
+
+## *NEW: Female-biased Nouns Proportion*
+
+# read data
+fnoun_number <- read.csv('/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy_noun_utterance.csv')
+
+# Define words that refer to the appearance description
+fnoun_words <- c("dress", "doll", "necklace", "purse", "baby", "sweater", "girl")
+
+# Filter gloss that contains the specified word
+filtered_fnoun <- fnoun_number %>% 
+  filter(sapply(fnoun_words, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
+
+grouped_fnoun_number <- filtered_fnoun %>%
+  group_by(target_child_name) %>%
+  summarise(gloss_count = n())
+
+write.csv(grouped_fnoun_number, '/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/grouped_fnoun_number.csv', row.names = FALSE)
