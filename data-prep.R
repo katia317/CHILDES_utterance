@@ -7,28 +7,28 @@ library(childesr)
 # Total: 6 Corpuses, 58 children
 # Providence Corpus, 6 children (3 girls, 3 boys)
 pro <- get_utterances(role = "Mother", age = c(12,36), corpus = "Providence")
-pro_utterance <- select(pro, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
+pro_utterance <- select(pro, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
 
 # Gleason Corpus, 7 children (3 girls, 4 boys)
 # Laurel, Martin, Nanette, Patricia, Richard, Victor, William
 gleason <- get_utterances(role = "Mother", age = c(12,36), corpus = "Gleason")
-gle_utterance <- select(gleason, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
+gle_utterance <- select(gleason, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
 
 # McCune Corpus, 10 children
 mcc <- get_utterances(role = "Mother", age = c(12,36), corpus = "McCune")
-mcc_utterance <- select(mcc, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
+mcc_utterance <- select(mcc, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
 
 # Warren Corpus, 9 children (4 girls, 5 boys)
 warren <- get_utterances(role = "Mother", age = c(12,36), corpus = "Warren")
-wr_utterance <- select(warren, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
+wr_utterance <- select(warren, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
 
 # VanHouten Corpus, 20 children (8 girls, 12 boys)
 van <- get_utterances(role = "Mother", age = c(12,36), corpus = "VanHouten")
-van_utterance <- select(van, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
+van_utterance <- select(van, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
 
 # Weist Corpus, 6 children (3 girls, 3 boys)
 weist <- get_utterances(role = "Mother", age = c(12,36), corpus = "Weist")
-wst_utterance <- select(weist, corpus_name, gloss, target_child_name, target_child_age, target_child_sex, part_of_speech)
+wst_utterance <- select(weist, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
 
 # combined utterance
 combined_utterance <- bind_rows(wst_utterance, van_utterance, wr_utterance,
@@ -43,12 +43,17 @@ noun_utterance <- combined_utterance %>%
   filter(grepl("n", part_of_speech))
 
 # export combined tibbles
-write.csv(adj_utterance, file = "adj_utterance.csv", row.names = FALSE)
-write.csv(noun_utterance, file = "noun_utterance.csv", row.names = FALSE)
+write.csv(adj_utterance, file = "/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj_utterance.csv", row.names = FALSE)
+write.csv(noun_utterance, file = "/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/noun_utterance.csv", row.names = FALSE)
+
+## ======================================================================== ##
 
 # tidied data files read-in
+
 adj_utterance <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy_adj_utterance.csv")
 noun_utterance <- read_csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy_noun_utterance.csv")
+
+right_join()
 
 # female adj. utterance
 adj_female <- adj_utterance %>% 
@@ -369,15 +374,15 @@ ggplot(proportion_appearance, aes(x = target_child_sex, y = without_pretty_propo
   labs(x = "Gender", y = "Proportion", title = "Without Pretty Proportion") +
   theme_minimal()
 
-## *NEW: Female-biased Nouns Proportion*
+## Female-biased Nouns Proportion
 
 # read data
 fnoun_number <- read.csv('/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy_noun_utterance.csv')
 
-# Define words that refer to the appearance description
+# Define words that refer to female-biased nouns
 fnoun_words <- c("dress", "doll", "necklace", "purse", "baby", "sweater", "girl")
 
-# Filter gloss that contains the specified word
+# Filter gloss that contains the specified Female-Biased Nouns
 filtered_fnoun <- fnoun_number %>% 
   filter(sapply(fnoun_words, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
 
@@ -385,4 +390,32 @@ grouped_fnoun_number <- filtered_fnoun %>%
   group_by(target_child_name) %>%
   summarise(gloss_count = n())
 
-write.csv(grouped_fnoun_number, '/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/grouped_fnoun_number.csv', row.names = FALSE)
+write.csv(grouped_mnoun_number, '/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/grouped_fnoun_number.csv', row.names = FALSE)
+
+## 02/03/2024 *NEW: Male-biased Nouns Proportion*
+mnoun_number <- read.csv('/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy_noun_utterance.csv')
+
+# Define words that refer to male-biased nouns
+mnoun_words <- c("broom", "firetruck", "truck", "train", "hammer", "motorcycle", "shovel")
+
+# Filter gloss that contains the specified Male-Biased Nouns
+filtered_mnoun <- mnoun_number %>% 
+  filter(sapply(mnoun_words, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
+
+grouped_mnoun_number <- filtered_mnoun %>%
+  group_by(target_child_name) %>%
+  summarise(gloss_count = n())
+
+write.csv(grouped_mnoun_number, '/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/grouped_mnoun_number.csv', row.names = FALSE)
+
+## *Proportion Calculation*
+noun_number_data <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_number_data.csv")
+
+# 计算 mnoun_proportion 并添加到数据框中
+noun_number_data <- noun_number_data %>%
+  mutate(mnoun_proportion = mnoun_count / gloss_count) %>%
+  mutate(fnoun_proportion = fnoun_count / gloss_count)
+
+
+# 导出修改后的数据框到新的 CSV 文件
+write.csv(noun_number_data, "/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv", row.names = FALSE)
