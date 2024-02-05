@@ -68,9 +68,7 @@ r_refs("r-references.bib")
 ```
 
 
-# Methods
-
-### dataset
+# dataset
 
 ```
 6 Corpuses from the **CHILDES** 
@@ -108,26 +106,23 @@ And these characters:
 
 ## Procedure
 
-## Data analysis
-### Assignment (10)
-### 10.1
-```{r mock up female biased nouns plots}
+# Data analysis
+## Assignment (10) & (12)
+## 10.1 & 12.2
+```{r Male-Biased Nouns plots}
 
 library(ggplot2)
 install.packages("reshape2")
 library(reshape2)
 
-data <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/tidy data/counts_fnouns.csv")
+m.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
 
-long_data <- melt(data, id.vars = "gloss")
-
-ggplot(long_data, aes(x = gloss, y = value, fill = variable)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  theme_minimal() +
-  labs(x = "Word", y = "Count", fill = "Gender",
-       title = "Frequency of Female Gender-biased Nouns",
-       subtitle = "Comparing the frequency of gender-biased maternal CDS between female and male infants") +
-  scale_fill_manual(values = c("female" = "pink", "male" = "lightblue"))
+ggplot(m.data, aes(x = target_child_sex, y = mnoun_proportion, fill = target_child_sex)) +
+  geom_boxplot(alpha = 0.5) +
+  geom_jitter(alpha = 0.5, aes(colour = target_child_sex)) +
+  scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
+  labs(x = "Gender", y = "Proportion", title = "Male-Biased Noun Proportion") +
+  theme_minimal()
 
 # X-axis: The gloss variable, representing different words (like "dress", "doll", "necklace", etc.).
 # Y-axis: The count or frequency of each word, indicating how often each word appears in the dataset.
@@ -138,22 +133,43 @@ ggplot(long_data, aes(x = gloss, y = value, fill = variable)) +
 ###10.2
 ```{r mock up Female-biased Nouns Plot}
 
-proportion_fnoun <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/fnoun_number_proportions.csv")
+f.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
 
-ggplot(proportion_fnoun, aes(x = target_child_sex, y = fnoun_proportion, fill = target_child_sex)) +
+plot_f.data <- ggplot(f.data, aes(x = target_child_sex, y = fnoun_proportion, fill = target_child_sex)) +
   geom_boxplot(alpha = 0.5) +
+  geom_jitter(alpha = 0.5, aes(colour = target_child_sex)) +
   scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
   labs(x = "Gender", y = "Proportion", title = "Female-Biased Noun Proportion") +
   theme_minimal()
+print(plot_f.data)
 
-# X-axis: female/male infants
-# Y-axis: counts of frequency of female-biased nouns
-# Type of Plot: box plot
-# Comparison Across Groups?: Yes
-# Anticipated Findings: mothers speak more female-biased nouns in CDS to female infants than to male infants
-# I may add another layer of point chart on the plot, showing data of each child
+### X-axis: female/male infants
+### Y-axis: counts of frequency of female-biased nouns
+### Type of Plot: box plot
+### Comparison Across Groups?: Yes
+### Anticipated Findings: mothers speak more female-biased nouns in CDS to female infants than to male infants
 
 ```
+
+```{r combined plot}
+
+combined.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
+
+long_data <- combined.data %>%
+  pivot_longer(cols = c(mnoun_proportion, fnoun_proportion),
+               names_to = "type",
+               values_to = "proportion")
+
+ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_sex)) +
+  geom_boxplot(alpha = 0.5) +
+  geom_jitter(alpha = 0.5, aes(colour = target_child_sex)) +
+  scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
+  labs(x = "Gender", y = "Proportion") +
+  facet_wrap(~type, scales = "fixed") +
+  theme_minimal()
+
+```
+
 # Results
 
 # Discussion

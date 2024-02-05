@@ -65,3 +65,41 @@ ggplot(filtered_sw, aes(x = height_in, y = mass)) +
   geom_point(shape = 17)
   labs(x = "height_in", y = "mass")
 
+## Assignment 12.1
+
+# Plot 1
+sw.wrangled <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/course data/sw.wrangled.csv")
+filtered_sw <- sw.wrangled %>% filter(mass <= 300)
+ggplot(filtered_sw, aes(x = hair, y = mass, fill = hair)) +
+  geom_boxplot(aes(x = reorder(hair, -table(hair)[hair])))+
+  geom_point() + 
+  labs(x = "Hair color(s)", y = "Mass (kg)", fill = "Colourful hair")+
+  theme(panel.background = element_rect(fill = "grey90"))
+
+# Plot 2
+brown_sw <- filtered_sw %>%
+  mutate(hair = ifelse(hair == "brown", "Has brown hair", "No brown hair"))
+
+plot_brown <- ggplot(brown_sw, aes(x = mass, y = height_in)) +
+  geom_smooth(method = "lm") +
+  xlim(-200, 200) +
+  ylim(-4, 200) +
+  geom_point() +
+  facet_wrap(~hair) + 
+  theme_minimal() +
+  labs(title = "Mass vs. height by brown-hair-havingness",
+       subtitle = "A critically important analysis")
+print(plot_brown)
+
+# Plot 3 
+library(tidyverse)
+species_fst <- sw.wrangled %>%
+  mutate(species_first_letter = substr(species, 1, 1)) %>%
+  filter(!is.na(species_first_letter)) %>%
+  group_by(species_first_letter, gender) %>%
+  summarise(count = n(), .groups = 'drop')
+plot_species <- ggplot(species_fst, aes(x = count, y = fct_rev(species_first_letter), fill = gender))+
+  geom_col()+
+  labs(y = "species_first_letter")
+print(plot_species)
+  
