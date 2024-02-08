@@ -110,7 +110,9 @@ And these characters:
 ## Assignment (10) & (12)
 ## 10.1 & 12.2
 ```{r Male-Biased Nouns plots}
-
+# Data analysis
+## Assignment (10) & (12)
+## 10.1 & 12.2
 library(ggplot2)
 install.packages("reshape2")
 library(reshape2)
@@ -124,11 +126,11 @@ ggplot(m.data, aes(x = target_child_sex, y = mnoun_proportion, fill = target_chi
   labs(x = "Gender", y = "Proportion", title = "Male-Biased Noun Proportion") +
   theme_minimal()
 
-# X-axis: The gloss variable, representing different words (like "dress", "doll", "necklace", etc.).
-# Y-axis: The count or frequency of each word, indicating how often each word appears in the dataset.
-# Type of Plot: Bar Chart. 
-# Comparison Across Groups?: Yes
-# Anticipated Findings: mothers speak more female-biased nouns to female infants than to male infants
+### X-axis: The gloss variable, representing different words (like "dress", "doll", "necklace", etc.).
+### Y-axis: The count or frequency of each word, indicating how often each word appears in the dataset.
+### Type of Plot: Bar Chart. 
+### Comparison Across Groups?: Yes
+### Anticipated Findings: mothers speak more female-biased nouns to female infants than to male infants
 ```
 ###10.2
 ```{r mock up Female-biased Nouns Plot}
@@ -152,22 +154,31 @@ print(plot_f.data)
 ```
 
 ```{r combined plot}
-
+## Assignment (13). Prettified Plot
 combined.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
 
 long_data <- combined.data %>%
   pivot_longer(cols = c(mnoun_proportion, fnoun_proportion),
                names_to = "type",
                values_to = "proportion")
+labels_gender = c('fnoun_proportion' = "Female-Biased", 'mnoun_proportion' = "Male-Biased")
 
 ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_sex)) +
   geom_boxplot(alpha = 0.5) +
   geom_jitter(alpha = 0.5, aes(colour = target_child_sex)) +
   scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
   labs(x = "Gender", y = "Proportion") +
-  facet_wrap(~type, scales = "fixed") +
-  theme_minimal()
-
+  facet_wrap(~type, scales = "fixed", labeller = as_labeller(labels_gender)) +
+  labs(title = "Proportion of Gender-Biased Nouns")+
+  theme(
+  title = element_text(family = "Comic Sans MS"),
+  axis.title = element_text(family = "Courier"),
+  panel.grid = element_line(colour = "white", linetype = 3, size = .7),
+  legend.title = element_text(family = "Courier", size = 10),
+  strip.background = element_rect(fill = "gray60"),
+  strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
+  legend.position = "bottom"
+)
 ```
 
 # Results

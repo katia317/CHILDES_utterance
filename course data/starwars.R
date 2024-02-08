@@ -102,4 +102,52 @@ plot_species <- ggplot(species_fst, aes(x = count, y = fct_rev(species_first_let
   geom_col()+
   labs(y = "species_first_letter")
 print(plot_species)
-  
+
+
+# Assignment 13.1
+library(tidyverse)
+library(ggplot2)
+install.packages("ggsci")
+library(ggsci)
+
+sw.wrangled$gender <- factor(sw.wrangled$gender)
+sw.wrangled$gender <- relevel(sw.wrangled$gender, ref = "f")
+levels(sw.wrangled$gender) <- c("Female", "Male")
+
+sw.wrangled$gender <- factor(sw.wrangled$gender, levels = c("Female", "Male", "Other"))
+
+sw.wrangled$gender[is.na(sw.wrangled$gender)] <- "Other"
+
+plot_gender <- ggplot(sw.wrangled, aes(x = height_cm, y = mass, colour = gender)) +
+  geom_point(alpha = .5) +
+  geom_smooth(method="lm", aes(colour = gender), fill = "#CCCCFF") + 
+  facet_wrap(facets = ~gender, scales = "free_y") +
+  scale_x_continuous(breaks = seq(60,270,30)) +
+  labs(title = "Height and weight across gender presentation", 
+       subtitle = 'A cautionary tale in misleading "free" axis scales & bad design choices',
+       y = "Mass (kg)",
+       x = "Height (cm)",
+       colour = "Gender Presentation",
+       caption = "Color hint: use the ggsci package!")+
+  scale_color_manual(values = c("Female" = "#850B0C", "Male" = "#918F93", "Other" = "#FDA625")) +
+  theme(
+    panel.background = element_rect(fill = "mistyrose1"),
+    panel.grid.major.y = element_line(colour = "lightgray", linetype = 4, size = .5),
+    panel.grid.major.x = element_line(colour = "white", linetype = 2, size = .2),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    legend.position = "bottom",
+    axis.title.x = element_text(family = "Comic Sans MS"),
+    axis.title.y = element_text(family = "Comic Sans MS"),
+    axis.text.x = element_text(family = "Comic Sans MS", angle = 45),
+    axis.text.y = element_text(face = "bold.italic", family = "Optima", hjust = 0),
+    title = element_text(family = "Comic Sans MS"),
+    strip.background = element_rect(fill = "#006400"),
+    strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
+    legend.title = element_text(family = "Brush Script MT", size = 20),
+    legend.background = (element_rect(fill = "#CCCCFF")),
+    plot.caption = element_text(colour = "red", family = "Comic Sans MS", hjust = 0, angle = 180)
+  )
+
+print(plot_gender)
+
