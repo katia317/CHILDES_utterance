@@ -146,7 +146,8 @@ plot_gender <- ggplot(sw.wrangled, aes(x = height_cm, y = mass, colour = gender)
     strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
     legend.title = element_text(family = "Brush Script MT", size = 20),
     legend.background = (element_rect(fill = "#CCCCFF")),
-    plot.caption = element_text(colour = "red", family = "Comic Sans MS", hjust = 0, angle = 180)
+    plot.caption = element_text(colour = "red", family = "Comic Sans MS", hjust = 0, angle = 180),
+    panel.border = element_rect(color = "black", fill = NA, size = .3)
   )
 
 print(plot_gender)
