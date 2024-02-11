@@ -65,6 +65,10 @@ print(result3)
 ```{r setup, include = FALSE}
 library("papaja")
 r_refs("r-references.bib")
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
 ```
 
 
@@ -104,11 +108,8 @@ And these characters:
     + Morty 167
   - Summer
 
-## Procedure
-
 # Data analysis
 ## Assignment (10) & (12)
-## 10.1 & 12.2
 ```{r Male-Biased Nouns plots}
 # Data analysis
 ## Assignment (10) & (12)
@@ -153,10 +154,14 @@ print(plot_f.data)
 
 ```
 
-```{r combined plot}
-## Assignment (13). Prettified Plot
+As seen in Figure\\@ref(fig:my-figure), There's gendered bias in the nouns of mother's infant-directed speech.
+#*I couldn't reference the figure or the table*
+
+```{r my-figure, fig.cap="Proportion of Gender-Biased Nouns by Gender"}
+## Assignment 13. Prettified Plot
 combined.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
 
+library(tidyr)
 long_data <- combined.data %>%
   pivot_longer(cols = c(mnoun_proportion, fnoun_proportion),
                names_to = "type",
@@ -180,6 +185,26 @@ ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_
   legend.position = "bottom"
 )
 ```
+
+
+```{r my-table, tab.cap = "Male-Infant Data"}
+## Assignment 14
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+my_table <- kable(m.data,
+format = "html", 
+booktabs = TRUE, 
+caption = "Male-Infant Data", 
+label = "my_table") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE) %>%
+  column_spec(1, bold = TRUE, color = "blue") %>%
+  row_spec(0, bold = TRUE, background = "#D3D3D3")
+  
+my_table
+```
+
+As shown in Table @ref(tab:my_table), the gender distribution in the dataset varies, with a higher percentage of Female compared to Male and Other. 
 
 # Results
 
