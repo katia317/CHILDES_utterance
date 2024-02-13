@@ -1,47 +1,11 @@
 ---
 title             : "My Notebook"
 shorttitle        : "from D2M course"
-
 author: 
   - name          : "Katia Yang"
-    affiliation   : "1"
-    corresponding : yes    # Define only one corresponding author
-    address       : "Postal address"
     email         : "kaiweny@uchicago.edu"
-    role: # Contributorship roles (e.g., CRediT, https://credit.niso.org/)
-      - "Conceptualization"
-      - "Writing - Original Draft Preparation"
-      - "Writing - Review & Editing"
-
-affiliation:
-  - id            : "1"
-    institution   : "University of Chicago"
-
-authornote: |
-  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
-
-  Enter author note here.
-
-abstract: |
-  
-  <!-- https://tinyurl.com/ybremelq -->
-  
-keywords          : "keywords"
-wordcount         : "X"
-
-bibliography      : "r-references.bib"
-
-floatsintext      : no
-linenumbers       : yes
-draft             : no
-mask              : no
-
-figurelist        : no
-tablelist         : no
-footnotelist      : no
-
-classoption       : "man"
-output            : html_document
+output: 
+  bookdown::html_document2:
 ---
 
 ```{r source-script}
@@ -109,11 +73,10 @@ And these characters:
   - Summer
 
 # Data analysis
-## Assignment (10) & (12)
+
 ```{r Male-Biased Nouns plots}
 # Data analysis
-## Assignment (10) & (12)
-## 10.1 & 12.2
+# Assignment 10 & 12
 library(ggplot2)
 install.packages("reshape2")
 library(reshape2)
@@ -154,11 +117,11 @@ print(plot_f.data)
 
 ```
 
-As seen in Figure\\@ref(fig:my-figure), There's gendered bias in the nouns of mother's infant-directed speech.
+As seen in Figure\@ref(fig:my-figure), There's gendered bias in the nouns of mother's infant-directed speech.
 #*I couldn't reference the figure or the table*
 
 ```{r my-figure, fig.cap="Proportion of Gender-Biased Nouns by Gender"}
-## Assignment 13. Prettified Plot
+# Assignment 13. Prettified Plot
 combined.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
 
 library(tidyr)
@@ -188,7 +151,7 @@ ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_
 
 
 ```{r my-table, tab.cap = "Male-Infant Data"}
-## Assignment 14
+# Assignment 14
 library(tidyverse)
 library(knitr)
 library(kableExtra)
@@ -202,6 +165,18 @@ label = "my_table") %>%
   row_spec(0, bold = TRUE, background = "#D3D3D3")
   
 my_table
+```
+
+```{r}
+# Assignment 15
+### Load necessary libraries
+library(tidyverse)
+library(psych)
+library(stats)
+library(lme4)
+library(scales)
+
+
 ```
 
 As shown in Table @ref(tab:my_table), the gender distribution in the dataset varies, with a higher percentage of Female compared to Male and Other. 
