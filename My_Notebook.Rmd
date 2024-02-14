@@ -27,60 +27,23 @@ print(result3)
 ```
 
 ```{r setup, include = FALSE}
+# r package library
 library(papaja)
 r_refs("r-references.bib")
 library(tidyverse)
 library(knitr)
 library(tinytex)
-knitr::opts_chunk$set(echo = TRUE)
 library(kableExtra)
 
 ```
 
 
 # dataset
-
-```
-6 Corpuses from the **CHILDES** 
-URL:[<https://childes.talkbank.org/>]
-
-## Material
-
-## Participants
-
-Participants including *6 children*:   
-1. Alex  
-   a. Alex's mother
-2. Violet  
-   a. Violet's father
-3. Naima  
-4. Lily  
-5. William  
-6. Ethan  
-
-<!-- I don't know what to write --> 
-And these characters: 
-
-* Adventure Time
-  - Finn
-  - Jack
-  - BMO
-  - Princess Bubblegum
-  - Ice King
-* Rick and Morty
-  - Rick
-  - Morty
-    + Morty 233
-    + Morty 167
-  - Summer
-
-# Data analysis
-
-```{r Male-Biased Nouns plots}
-# Data analysis
 # Assignment 10 & 12
+``` {r male-nouns}
+# Data analysis
+
 library(ggplot2)
-install.packages("reshape2")
 library(reshape2)
 
 m.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
@@ -91,18 +54,18 @@ ggplot(m.data, aes(x = target_child_sex, y = mnoun_proportion, fill = target_chi
   scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
   labs(x = "Gender", y = "Proportion", title = "Male-Biased Noun Proportion") +
   theme_minimal()
-
-### X-axis: The gloss variable, representing different words (like "dress", "doll", "necklace", etc.).
-### Y-axis: The count or frequency of each word, indicating how often each word appears in the dataset.
-### Type of Plot: Bar Chart. 
-### Comparison Across Groups?: Yes
-### Anticipated Findings: mothers speak more female-biased nouns to female infants than to male infants
+  
 ```
+X-axis: The gloss variable, representing different words (like "dress", "doll", "necklace", etc.).
+Y-axis: The count or frequency of each word, indicating how often each word appears in the dataset.
+Type of Plot: Bar Chart. 
+Comparison Across Groups?: Yes
+Anticipated Findings: mothers speak more female-biased nouns to female infants than to male infants
 
 As seen in Figure \@ref(fig:my-figure), There's gendered bias in the nouns of mother's infant-directed speech.
+# Assignment 13. Prettified Plot
 
 ```{r my-figure, fig.cap="Proportion of Gender-Biased Nouns by Gender"}
-# Assignment 13. Prettified Plot
 combined.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
 
 library(tidyr)
@@ -128,18 +91,17 @@ ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_
   strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
   legend.position = "bottom"
 )
-### X-axis: female/male infants
-### Y-axis: counts of frequency of female-biased nouns
-### Type of Plot: box plot
-### Comparison Across Groups?: Yes
-### Anticipated Findings: mothers speak more female-biased nouns in CDS to female infants than to male infants
 ```
-
+X-axis: female/male infants  
+Y-axis: counts of frequency of female-biased nouns
+Type of Plot: box plot  
+Comparison Across Groups?: Yes  
+Anticipated Findings: mothers speak more   female-biased nouns in CDS to female infants than to male infants
 
 As shown in Table \@ref(tab:my-table), the gender distribution in the dataset varies, with a higher percentage of Female compared to Male.
 
-```{r my-table, tab.cap = "Male-Infant Data", echo = FALSE, results = "asis"}
 # Assignment 14
+```{r my-table, tab.cap = "Male-Infant Data", echo = FALSE, results = "asis"}
 library(tidyverse)
 library(knitr)
 library(kableExtra)
@@ -155,26 +117,103 @@ label = "my-table") %>%
 print(my_table)
 ```
 
-```{r}
-# Assignment 15
-### Load necessary libraries
+
+# Assignment 15 & 16
+
+## *Descriptive Analysis*: Examining Maternal Gender-Biased Language Imput Patterns
+```{r descriptive-analysis}
 library(tidyverse)
 library(psych)
 library(stats)
 library(lme4)
 library(scales)
 
+   ## In this analysis, I aim to describe the patterns of gender-biased language usage by mothers in interactions with their children. The analysis will focus on:
+   ### - The frequency of appearance-related adjectives (e.g., "pretty", "beautiful") and competence-related adjectives (e.g., "strong", "smart") used by mothers when speaking to boys vs. girls.
+   ### - The frequency of gender-biased nouns (e.g., "truck" for boys, "doll" for girls) used by mothers in their speech to children of different genders.
 
-```
+  ## Independent Variables: Child's gender (binary: male or female)
+
+## Assignment 16.1 *Descriptive Statistics* for male-biased nouns
+# Calculate descriptive statistics for male-biased nouns
+noun_tidied_count <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_number.csv")
+
+summary_mnoun <- noun_tidied_count %>%
+  group_by(target_child_sex) %>%
+  summarise(mean_mnoun = mean(mnoun_proportion),
+            median_mnoun = median(mnoun_proportion),
+            sd_mnoun = sd(mnoun_proportion),
+            .groups = 'drop')
+
+# Print the summary statistics
+print(summary_mnoun)
+
+#Visualization of all stats
+library(tidyr)
+long_data <- noun_tidied_count %>%
+  pivot_longer(cols = c(mnoun_proportion, fnoun_proportion),
+               names_to = "type",
+               values_to = "proportion")
+labels_gender = c('fnoun_proportion' = "Female-Biased", 'mnoun_proportion' = "Male-Biased")
+
+ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_sex)) +
+  geom_boxplot(alpha = 0.5) +
+  geom_jitter(alpha = 0.5, aes(colour = target_child_sex)) +
+  scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
+  labs(x = "Gender", y = "Proportion") +
+  facet_wrap(~type, scales = "fixed", labeller = as_labeller(labels_gender)) +
+  labs(title = "Proportion of Gender-Biased Nouns")+
+  theme(
+  panel.grid = element_line(colour = "white", linetype = 3, size = .7),
+  legend.title = element_text(size = 10),
+  strip.background = element_rect(fill = "gray60"),
+  strip.text = element_text(colour = "white", hjust = 0),
+  legend.position = "bottom"
+)
+
+  ## Dependent Variables:
+  ### - Percentage of gender-biased adjectives (appearance-related and competence-related) in maternal language input.
+  ### - Percentage of gender-biased nouns in maternal language input.
  
+  ## This descriptive analysis will involve calculating means and standard deviations for the usage of gender-biased language across mothers of boys and girls. We will visualize these patterns through box and jitter plots to identify any apparent differences in language input based on the child's gender.
+```  
 
-# Results
+## *Hypothesis Testing Analysis*: Testing the Influence of Child's Gender on Maternal Language Input
+```{r hypothesis-analysis}
+library(stats)
 
-# Discussion
+# ANOVA for male-biased nouns
+anova_mnoun <- aov(mnoun_proportion ~ target_child_sex, data = noun_tidied_count)
+summary(anova_mnoun)
 
-\newpage
+# ANOVA for female-biased nouns
+anova_fnoun <- aov(fnoun_proportion ~ target_child_sex, data = noun_tidied_count)
+summary(anova_fnoun)
 
-# References
+  ## Hypothesized Results: It is hypothesized that there will be a significant difference in the percentage of gender-biased language (both adjectives and nouns) used by mothers, with a higher use of appearance-related words for girls and competence-related words for boys, as well as a higher usage of gender-congruent nouns (male-biased with boys, female-biased with girls).
+  
+  ## Appropriate Tests: For comparing multiple variables between two groups (boys vs. girls), *ANOVA* could be appropriate for continuous data (e.g., percentage of gender-biased words). 
+
+  ### This analysis will help determine if there is a statistically significant difference in maternal language input that could contribute to the early formation of gender stereotypes and expectations in children.
+```
+The ANOVA tests conducted on the proportions of gender-biased nouns used by mothers reveal the following:
+
+For male-biased nouns:
+
+F-statistic: 4.33
+P-value: 0.0423
+The results suggest that there is a statistically significant difference in the usage of male-biased nouns by mothers when speaking to male children compared to female children, at the conventional 0.05 significance level.
+
+For female-biased nouns:
+
+F-statistic: 5.25
+P-value: 0.0259
+Similarly, there is a statistically significant difference in the usage of female-biased nouns by mothers when speaking to male children compared to female children, also at the 0.05 significance level.
+
+
 
 ::: {#refs custom-style="Bibliography"}
 :::
+
+```
+
