@@ -1,0 +1,270 @@
+---
+title: "Thesis data prep"
+author: "Kaiwen"
+date: "2024-02-14"
+output: html_document
+---
+# 0. Packages Library
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# r package library
+library(papaja)
+r_refs("r-references.bib")
+library(tidyverse)
+library(knitr)
+library(readr)
+library(dplyr)
+library(tidyr)
+library(magrittr)
+library(childesr)
+```
+
+# 1. Dataset: 6 Corpuses, 58 children
+```{r data-selection}
+## 1.1 Providence Corpus, 6 children (3 girls, 3 boys)
+pro <- get_utterances(role = "Mother", age = c(12,36), corpus = "Providence")
+pro_utterance <- select(pro, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
+
+## 1.2 Gleason Corpus, 7 children (3 girls, 4 boys)
+### Laurel, Martin, Nanette, Patricia, Richard, Victor, William
+gleason <- get_utterances(role = "Mother", age = c(12,36), corpus = "Gleason")
+gle_utterance <- select(gleason, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
+
+## 1.3 McCune Corpus, 10 children
+mcc <- get_utterances(role = "Mother", age = c(12,36), corpus = "McCune")
+mcc_utterance <- select(mcc, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
+
+## 1.4 Warren Corpus, 9 children (4 girls, 5 boys)
+warren <- get_utterances(role = "Mother", age = c(12,36), corpus = "Warren")
+wr_utterance <- select(warren, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
+
+## 1.5 VanHouten Corpus, 20 children (8 girls, 12 boys)
+van <- get_utterances(role = "Mother", age = c(12,36), corpus = "VanHouten")
+van_utterance <- select(van, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
+
+## 1.6 Weist Corpus, 6 children (3 girls, 3 boys)
+weist <- get_utterances(role = "Mother", age = c(12,36), corpus = "Weist")
+wst_utterance <- select(weist, corpus_name, id, gloss, target_child_name, target_child_id, target_child_age, target_child_sex, part_of_speech, corpus_id, collection_id, speaker_id, transcript_id)
+```
+
+# 2. combine all data
+```{r combine-dataset}
+
+combined_utterance <- bind_rows(wst_utterance, van_utterance, wr_utterance,mcc_utterance, gle_utterance, pro_utterance)
+
+## 2.1 filter utterances that include adj.
+adj_utterance <- combined_utterance %>% 
+  filter(grepl("adj", part_of_speech))
+
+## 2.2 filter utterances that include nouns.
+noun_utterance <- combined_utterance %>% 
+  filter(grepl("n", part_of_speech))
+
+## 2.3 export combined tibbles
+#write.csv(adj_utterance, file = "/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj_utterance.csv", row.names = FALSE)
+#write.csv(noun_utterance, file = "/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/noun_utterance.csv", row.names = FALSE)
+```
+
+# 3. Filter by gender
+## 3.1 all utterances number
+*Female biased nouns*: dress, doll, necklace, purse, baby, sweater, girl
+
+```{r filter-by-gender, echo=FALSE}
+adj_female <- adj_utterance %>% 
+  filter(grepl("female", target_child_sex))
+write.csv(adj_female, file = "adj_female.csv", row.names = FALSE)
+
+table(adj_utterance$target_child_sex)
+
+# female noun. utterance
+n_female <- noun_utterance %>% 
+  filter(grepl("female", target_child_sex))
+write.csv(n_female, file = "n_female.csv", row.names = FALSE)
+
+table(noun_utterance$target_child_sex)
+## female noun. utterance:  98,396 obs.
+##   male noun. utterance:  70,543 obs.
+
+# check for NAs
+which(is.na(adj_utterance$target_child_sex))
+which(is.na(adj_utterance$target_child_name))
+
+# what if the columns are blank??
+adj_importNA <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj_utterance.csv", na = " ")
+
+```
+
+# 4. Providence Example
+## 4.1 Adj
+```{r providence-adj}
+appearance_words <- c("handsome", "gorgeous", "beautiful", "lovely", "cute")
+
+# Filter gloss that contains the appearance-related adj.s
+pro_appearance <- pro_utterance %>% 
+  filter(sapply(appearance_words, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
+
+pro_adj_number <- pro_appearance %>%
+  group_by(target_child_name) %>%
+  summarise(adj_appearance_no_pretty = n())
+
+pro_utterance_number <- pro_utterance %>%
+  group_by(target_child_name) %>%
+  summarise(utterance_count = n())
+
+pro_utterance_number <- left_join(pro_utterance_number, pro_adj_number, by = "target_child_name")
+
+print(pro_utterance_number)
+```
+
+## 4.2 Nouns
+```{r providence-nouns}
+# Filter gloss that contains the specified Gender-Biased Nouns
+# 1. male-biased nouns
+mnoun_words <- c("broom", "firetruck", "truck", "train", "hammer", "motorcycle", "shovel")
+pro_mnoun <- pro_utterance %>% 
+  filter(sapply(mnoun_words, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
+
+pro_mnoun_number <- pro_mnoun %>%
+  group_by(target_child_name) %>%
+  summarise(mnoun_count = n())
+
+pro_utterance_number <- left_join(pro_utterance_number, pro_mnoun_number, by = "target_child_name")
+
+# 2. female-biased nouns
+fnoun_words <- c("dress", "doll", "necklace", "purse", "baby", "sweater", "girl")
+pro_fnoun <- pro_utterance %>% 
+  filter(sapply(fnoun_words, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
+
+pro_fnoun_number <- pro_fnoun %>%
+  group_by(target_child_name) %>%
+  summarise(fnoun_count = n())
+
+pro_utterance_number <- left_join(pro_utterance_number, pro_fnoun_number, by = "target_child_name")
+
+# Filter gloss that contains Competence-related adj.s
+com_adj <- c("clever","brilliant","smart","strong")
+pro_com <- pro_utterance %>% 
+  filter(sapply(com_adj, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
+
+pro_com_number <- pro_com %>%
+  group_by(target_child_name) %>%
+  summarise(competence_adj_number = n())
+
+pro_utterance_number <- left_join(pro_utterance_number, pro_com_number, by = "target_child_name")
+print(pro_utterance_number)
+```
+
+## 4.3 Combined
+```{r combine-data}
+# Calculate proportion and add it to the dataframe
+pro_proportion <- pro_utterance_number %>%
+  mutate(mnoun_proportion = mnoun_count / utterance_count) %>%
+  mutate(fnoun_proportion = fnoun_count / utterance_count) %>%
+  mutate(app_adj_proportion = adj_appearance_no_pretty / utterance_count) %>%
+  mutate(com_adj_proportion = competence_adj_number / utterance_count)
+print(pro_proportion)
+
+print(pro_proportion)
+```
+
+## 4.4 Plot
+```{r providence-plot}
+pro_proportion <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Providence Example/Providence_Proportion.csv")
+
+# Gender-biased Nouns Plot
+long_pro_noun <- pro_proportion %>%
+  pivot_longer(cols = c(mnoun_proportion, fnoun_proportion),
+               names_to = "type",
+               values_to = "proportion")
+labels_gender = c('fnoun_proportion' = "Female-Biased", 'mnoun_proportion' = "Male-Biased")
+
+plot_pro_noun <- ggplot(long_pro_noun, aes(x = target_child_sex, y = proportion, fill = target_child_sex)) +
+  geom_boxplot(alpha = 0.5) +
+  geom_jitter(alpha = 0.7, aes(colour = target_child_sex)) +
+  scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
+  labs(x = "Gender", y = "Proportion") +
+  facet_wrap(~type, scales = "fixed", labeller = as_labeller(labels_gender)) +
+  labs(title = "Providence Corpus: Proportion of Gender-Biased Nouns")+
+  theme(
+    title = element_text(family = "Comic Sans MS"),
+    axis.title = element_text(family = "Courier"),
+    panel.grid = element_line(colour = "white", linetype = 3, size = .7),
+    legend.title = element_text(family = "Courier", size = 10),
+    strip.background = element_rect(fill = "gray60"),
+    strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
+    legend.position = "bottom"
+  )
+ print(plot_pro_noun)
+ 
+ # Gender-biased Adj.s 
+ long_pro_adj <- pro_proportion %>%
+   pivot_longer(cols = c(app_adj_proportion, com_adj_proportion),
+                names_to = "type",
+                values_to = "proportion")
+ labels_gender_adj = c('app_adj_proportion' = "Appearance", 'com_adj_proportion' = "Competence")
+ 
+ plot_pro_adj <- ggplot(long_pro_adj, aes(x = target_child_sex, y = proportion, fill = target_child_sex, colour = target_child_sex)) +
+   geom_boxplot(alpha = 0.8) +
+   scale_fill_manual(values = c("female" = "#F6BDDF", "male" = "#92CCCE")) +
+   scale_color_manual(values = c("female" = "#CA69AF", "male" = "#337B9F")) + 
+   geom_jitter(alpha = 0.7) + 
+   labs(x = "Gender", y = "Proportion") +
+   facet_wrap(~type, scales = "fixed", labeller = as_labeller(labels_gender_adj)) +
+   labs(title = "Providence Corpus: Proportion of Biased Adj")+
+   theme(
+     title = element_text(family = "Comic Sans MS"),
+     axis.title = element_text(family = "Courier"),
+     panel.grid = element_line(colour = "white", linetype = 3, size = .7),
+     legend.title = element_text(family = "Courier", size = 10),
+     strip.background = element_rect(fill = "gray60"),
+     strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
+     legend.position = "bottom"
+   )
+print(plot_pro_adj)
+```
+
+
+# 5. Plot
+## 5.1 Gender Biased Nouns
+```{r my-figure, fig.cap="Proportion of Gender-Biased Nouns by Gender"}
+
+combined.data <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_number.csv")
+
+library(tidyr)
+long_data <- combined.data %>%
+  pivot_longer(cols = c(mnoun_proportion, fnoun_proportion),
+               names_to = "type",
+               values_to = "proportion")
+labels_gender = c('fnoun_proportion' = "Female-Biased", 'mnoun_proportion' = "Male-Biased")
+
+ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_sex)) +
+  geom_boxplot(alpha = 0.5) +
+  geom_jitter(alpha = 0.5, aes(colour = target_child_sex)) +
+  scale_fill_manual(values = c("female" = "lightpink", "male" = "lightblue")) +
+  labs(x = "Gender", y = "Proportion") +
+  facet_wrap(~type, scales = "fixed", labeller = as_labeller(labels_gender)) +
+  labs(title = "Proportion of Gender-Biased Nouns")+
+  theme(
+  title = element_text(family = "Comic Sans MS"),
+  axis.title = element_text(family = "Courier"),
+  panel.grid = element_line(colour = "white", linetype = 3, size = .7),
+  legend.title = element_text(family = "Courier", size = 10),
+  strip.background = element_rect(fill = "gray60"),
+  strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
+  legend.position = "bottom"
+)
+```
+
+## 5.2 Gender Biased Adj.s
+
+# 6. Count
+## 6.1 All utterance count
+Imported tidied table
+```{r tidied-noun-count-table}
+noun_tidied_count <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_number.csv")
+
+adj_tidied_count <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/adj_proportion_number.csv")
+
+print(noun_tidied_count)
+print(adj_tidied_count)
+```
