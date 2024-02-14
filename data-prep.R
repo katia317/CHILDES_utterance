@@ -182,7 +182,7 @@ write.csv(wadj_friendly, file = "wadj_friendly.csv", row.names = FALSE)
 ## pretty
 adj_pretty <- adj_utterance %>% 
   filter(grepl("pretty", gloss))
-write.csv(adj_pretty, file = "adj_pretty.csv", row.names = FALSE)
+write.csv(adj_pretty, "/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj./Pretty.csv", row.names = FALSE)
 
 ## look good
 adj_lookgood <- adj_utterance %>% 

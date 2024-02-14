@@ -4,7 +4,9 @@ author: "Kaiwen"
 date: "2024-02-14"
 output: html_document
 ---
+
 # 0. Packages Library
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 # r package library
@@ -20,6 +22,7 @@ library(childesr)
 ```
 
 # 1. Dataset: 6 Corpuses, 58 children
+
 ```{r data-selection}
 ## 1.1 Providence Corpus, 6 children (3 girls, 3 boys)
 pro <- get_utterances(role = "Mother", age = c(12,36), corpus = "Providence")
@@ -48,6 +51,7 @@ wst_utterance <- select(weist, corpus_name, id, gloss, target_child_name, target
 ```
 
 # 2. combine all data
+
 ```{r combine-dataset}
 
 combined_utterance <- bind_rows(wst_utterance, van_utterance, wr_utterance,mcc_utterance, gle_utterance, pro_utterance)
@@ -66,7 +70,9 @@ noun_utterance <- combined_utterance %>%
 ```
 
 # 3. Filter by gender
+
 ## 3.1 all utterances number
+
 *Female biased nouns*: dress, doll, necklace, purse, baby, sweater, girl
 
 ```{r filter-by-gender, echo=FALSE}
@@ -95,7 +101,9 @@ adj_importNA <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dat
 ```
 
 # 4. Providence Example
+
 ## 4.1 Adj
+
 ```{r providence-adj}
 appearance_words <- c("handsome", "gorgeous", "beautiful", "lovely", "cute")
 
@@ -117,6 +125,7 @@ print(pro_utterance_number)
 ```
 
 ## 4.2 Nouns
+
 ```{r providence-nouns}
 # Filter gloss that contains the specified Gender-Biased Nouns
 # 1. male-biased nouns
@@ -155,6 +164,7 @@ print(pro_utterance_number)
 ```
 
 ## 4.3 Combined
+
 ```{r combine-data}
 # Calculate proportion and add it to the dataframe
 pro_proportion <- pro_utterance_number %>%
@@ -168,6 +178,7 @@ print(pro_proportion)
 ```
 
 ## 4.4 Plot
+
 ```{r providence-plot}
 pro_proportion <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Providence Example/Providence_Proportion.csv")
 
@@ -186,12 +197,10 @@ plot_pro_noun <- ggplot(long_pro_noun, aes(x = target_child_sex, y = proportion,
   facet_wrap(~type, scales = "fixed", labeller = as_labeller(labels_gender)) +
   labs(title = "Providence Corpus: Proportion of Gender-Biased Nouns")+
   theme(
-    title = element_text(family = "Comic Sans MS"),
-    axis.title = element_text(family = "Courier"),
     panel.grid = element_line(colour = "white", linetype = 3, size = .7),
-    legend.title = element_text(family = "Courier", size = 10),
+    legend.title = element_text(size = 10),
     strip.background = element_rect(fill = "gray60"),
-    strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
+    strip.text = element_text(colour = "white", hjust = 0),
     legend.position = "bottom"
   )
  print(plot_pro_noun)
@@ -212,10 +221,8 @@ plot_pro_noun <- ggplot(long_pro_noun, aes(x = target_child_sex, y = proportion,
    facet_wrap(~type, scales = "fixed", labeller = as_labeller(labels_gender_adj)) +
    labs(title = "Providence Corpus: Proportion of Biased Adj")+
    theme(
-     title = element_text(family = "Comic Sans MS"),
-     axis.title = element_text(family = "Courier"),
      panel.grid = element_line(colour = "white", linetype = 3, size = .7),
-     legend.title = element_text(family = "Courier", size = 10),
+     legend.title = element_text(size = 10),
      strip.background = element_rect(fill = "gray60"),
      strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
      legend.position = "bottom"
@@ -223,9 +230,10 @@ plot_pro_noun <- ggplot(long_pro_noun, aes(x = target_child_sex, y = proportion,
 print(plot_pro_adj)
 ```
 
-
 # 5. Plot
+
 ## 5.1 Gender Biased Nouns
+
 ```{r my-figure, fig.cap="Proportion of Gender-Biased Nouns by Gender"}
 
 combined.data <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_number.csv")
@@ -245,12 +253,10 @@ ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_
   facet_wrap(~type, scales = "fixed", labeller = as_labeller(labels_gender)) +
   labs(title = "Proportion of Gender-Biased Nouns")+
   theme(
-  title = element_text(family = "Comic Sans MS"),
-  axis.title = element_text(family = "Courier"),
   panel.grid = element_line(colour = "white", linetype = 3, size = .7),
-  legend.title = element_text(family = "Courier", size = 10),
+  legend.title = element_text(size = 10),
   strip.background = element_rect(fill = "gray60"),
-  strip.text = element_text(colour = "white", family = "Courier", hjust = 0),
+  strip.text = element_text(colour = "white", hjust = 0),
   legend.position = "bottom"
 )
 ```
@@ -258,8 +264,11 @@ ggplot(long_data, aes(x = target_child_sex, y = proportion, fill = target_child_
 ## 5.2 Gender Biased Adj.s
 
 # 6. Count
+
 ## 6.1 All utterance count
+
 Imported tidied table
+
 ```{r tidied-noun-count-table}
 noun_tidied_count <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_number.csv")
 
@@ -267,4 +276,13 @@ adj_tidied_count <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes
 
 print(noun_tidied_count)
 print(adj_tidied_count)
+```
+
+#7. Pretty
+
+```{r pretty-code}
+pretty_table <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj./Pretty.csv")
+
+print(pretty_table)
+
 ```
