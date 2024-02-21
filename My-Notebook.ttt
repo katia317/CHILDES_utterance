@@ -1,0 +1,94 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\centering
+\caption{\label{tab:my-table}Male-Infant Data}
+\centering
+\begin{tabular}[t]{>{}llrrrrr}
+\toprule
+\cellcolor[HTML]{D3D3D3}{\textbf{target\_child\_name}} & \cellcolor[HTML]{D3D3D3}{\textbf{target\_child\_sex}} & \cellcolor[HTML]{D3D3D3}{\textbf{gloss\_count}} & \cellcolor[HTML]{D3D3D3}{\textbf{fnoun\_count}} & \cellcolor[HTML]{D3D3D3}{\textbf{mnoun\_count}} & \cellcolor[HTML]{D3D3D3}{\textbf{mnoun\_proportion}} & \cellcolor[HTML]{D3D3D3}{\textbf{fnoun\_proportion}}\\
+\midrule
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Aaron}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{57} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0000000}\\
+\textcolor{blue}{\textbf{Adam}} & male & 201 & 4 & 0 & 0.0000000 & 0.0199005\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Alex}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{19296} & \cellcolor{gray!10}{135} & \cellcolor{gray!10}{225} & \cellcolor{gray!10}{0.0116604} & \cellcolor{gray!10}{0.0069963}\\
+\textcolor{blue}{\textbf{Alfred}} & male & 91 & 2 & 2 & 0.0219780 & 0.0219780\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Alice}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{2081} & \cellcolor{gray!10}{106} & \cellcolor{gray!10}{66} & \cellcolor{gray!10}{0.0317155} & \cellcolor{gray!10}{0.0509370}\\
+\addlinespace
+\textcolor{blue}{\textbf{Allen}} & male & 108 & 0 & 0 & 0.0000000 & 0.0000000\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Anthony}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{39} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0000000}\\
+\textcolor{blue}{\textbf{Benjamin}} & male & 914 & 36 & 1 & 0.0010941 & 0.0393873\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Brian}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{89} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0112360}\\
+\textcolor{blue}{\textbf{Brooke}} & female & 97 & 9 & 0 & 0.0000000 & 0.0927835\\
+\addlinespace
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Carol}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{83} & \cellcolor{gray!10}{12} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.1445783}\\
+\textcolor{blue}{\textbf{Danielle}} & female & 90 & 5 & 0 & 0.0000000 & 0.0555556\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{David}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{688} & \cellcolor{gray!10}{75} & \cellcolor{gray!10}{24} & \cellcolor{gray!10}{0.0348837} & \cellcolor{gray!10}{0.1090116}\\
+\textcolor{blue}{\textbf{Doug}} & male & 88 & 1 & 2 & 0.0227273 & 0.0113636\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Emily}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{142} & \cellcolor{gray!10}{2} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0140845}\\
+\addlinespace
+\textcolor{blue}{\textbf{Emma}} & female & 180 & 4 & 3 & 0.0166667 & 0.0222222\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Erica}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{123} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0243902}\\
+\textcolor{blue}{\textbf{Ethan}} & male & 23210 & 269 & 715 & 0.0308057 & 0.0115898\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Jarret}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{99} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{0.0101010} & \cellcolor{gray!10}{0.0000000}\\
+\textcolor{blue}{\textbf{Jas}} & male & 185 & 2 & 1 & 0.0054054 & 0.0108108\\
+\addlinespace
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Jase}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{1777} & \cellcolor{gray!10}{88} & \cellcolor{gray!10}{71} & \cellcolor{gray!10}{0.0399550} & \cellcolor{gray!10}{0.0495217}\\
+\textcolor{blue}{\textbf{Jeff}} & male & 88 & 0 & 0 & 0.0000000 & 0.0000000\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Jessica}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{120} & \cellcolor{gray!10}{12} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.1000000}\\
+\textcolor{blue}{\textbf{Jillian}} & female & 2550 & 75 & 6 & 0.0023529 & 0.0294118\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Johnnie}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{222} & \cellcolor{gray!10}{22} & \cellcolor{gray!10}{10} & \cellcolor{gray!10}{0.0450450} & \cellcolor{gray!10}{0.0990991}\\
+\addlinespace
+\textcolor{blue}{\textbf{Katie}} & female & 81 & 3 & 0 & 0.0000000 & 0.0370370\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Kevin}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{139} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{0.0287770} & \cellcolor{gray!10}{0.0287770}\\
+\textcolor{blue}{\textbf{Kimberly}} & female & 86 & 4 & 0 & 0.0000000 & 0.0465116\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Laura}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{1360} & \cellcolor{gray!10}{55} & \cellcolor{gray!10}{25} & \cellcolor{gray!10}{0.0183824} & \cellcolor{gray!10}{0.0404412}\\
+\textcolor{blue}{\textbf{Laura\_Aurie}} & female & 4 & 0 & 0 & 0.0000000 & 0.0000000\\
+\addlinespace
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Laurel}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{276} & \cellcolor{gray!10}{18} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{0.0036232} & \cellcolor{gray!10}{0.0652174}\\
+\textcolor{blue}{\textbf{Lily}} & female & 38035 & 1289 & 356 & 0.0093598 & 0.0338898\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Martin}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{773} & \cellcolor{gray!10}{33} & \cellcolor{gray!10}{2} & \cellcolor{gray!10}{0.0025873} & \cellcolor{gray!10}{0.0426908}\\
+\textcolor{blue}{\textbf{Matt}} & male & 3947 & 85 & 50 & 0.0126678 & 0.0215353\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Matthew}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{49} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0000000}\\
+\addlinespace
+\textcolor{blue}{\textbf{Megan}} & female & 190 & 2 & 3 & 0.0157895 & 0.0105263\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Naima}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{36986} & \cellcolor{gray!10}{964} & \cellcolor{gray!10}{410} & \cellcolor{gray!10}{0.0110853} & \cellcolor{gray!10}{0.0260639}\\
+\textcolor{blue}{\textbf{Nanette}} & female & 609 & 15 & 0 & 0.0000000 & 0.0246305\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Nicole}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{100} & \cellcolor{gray!10}{10} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.1000000}\\
+\textcolor{blue}{\textbf{Patricia}} & female & 567 & 3 & 3 & 0.0052910 & 0.0052910\\
+\addlinespace
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Patrick}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{8} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.1250000}\\
+\textcolor{blue}{\textbf{Peter}} & male & 49 & 1 & 0 & 0.0000000 & 0.0204082\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Richard}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{345} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0028986}\\
+\textcolor{blue}{\textbf{Rick}} & male & 974 & 51 & 21 & 0.0215606 & 0.0523614\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Robert}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{56} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0178571}\\
+\addlinespace
+\textcolor{blue}{\textbf{Roman}} & male & 111 & 1 & 2 & 0.0180180 & 0.0090090\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Ronny}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{721} & \cellcolor{gray!10}{46} & \cellcolor{gray!10}{47} & \cellcolor{gray!10}{0.0651872} & \cellcolor{gray!10}{0.0638003}\\
+\textcolor{blue}{\textbf{Sarah}} & female & 51 & 2 & 0 & 0.0000000 & 0.0392157\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Scott}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{91} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.0000000} & \cellcolor{gray!10}{0.0000000}\\
+\textcolor{blue}{\textbf{Shawna}} & female & 29 & 3 & 0 & 0.0000000 & 0.1034483\\
+\addlinespace
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Stephen}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{153} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{2} & \cellcolor{gray!10}{0.0130719} & \cellcolor{gray!10}{0.0000000}\\
+\textcolor{blue}{\textbf{Tommy}} & male & 83 & 0 & 0 & 0.0000000 & 0.0000000\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Victor}}} & \cellcolor{gray!10}{male} & \cellcolor{gray!10}{504} & \cellcolor{gray!10}{6} & \cellcolor{gray!10}{2} & \cellcolor{gray!10}{0.0039683} & \cellcolor{gray!10}{0.0119048}\\
+\textcolor{blue}{\textbf{Violet}} & female & 14361 & 460 & 52 & 0.0036209 & 0.0320312\\
+\textcolor{blue}{\textbf{\cellcolor{gray!10}{Wendy}}} & \cellcolor{gray!10}{female} & \cellcolor{gray!10}{195} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{0.0051282} & \cellcolor{gray!10}{0.0153846}\\
+\addlinespace
+\textcolor{blue}{\textbf{William}} & male & 15388 & 160 & 286 & 0.0185859 & 0.0103977\\
+\bottomrule
+\end{tabular}
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+
+\caption{\label{tab:unnamed-chunk-9}Tukey HSD Test Results for Target Child Sex}
+\centering
+\begin{tabular}[t]{l|r|r|r|r}
+\hline
+  & diff & lwr & upr & p adj\\
+\hline
+male-female & -0.0214792 & -0.0402707 & -0.0026877 & 0.0258534\\
+\hline
+\end{tabular}
+\end{table*}
