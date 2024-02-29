@@ -25,17 +25,20 @@ $Competence-related adjectives$: "clever","brilliant","smart","strong"
 --[CHILDES-Utterances] 
    -- README.md 
    -- .gitignore
-   -- My Notebook.Rmd
--- scripts   
    -- My_Script.R  
--- data  
-   -- /Dataset_Providence  
-        -- /Alex  
-        -- /Ethan  
-        -- /Lily  
-        -- /Naima  
-        -- /Violet  
-        -- /William  
+-- Data Analysis
+   -- My Notebook.Rmd
+   -- My-Notebook.pdf
+   -- data-prep.R
+-- Dataset
+   -- /Childes dataset  
+        -- /adj.  
+        -- /fnoun 
+        -- /mnoun 
+        -- /Proportion data  
+        -- /tidy data
+        -- adj_utterance.csv
+        -- noun_utterance.csv
 ```
         
  
