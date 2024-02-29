@@ -1,7 +1,0 @@
-\begin{figure*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-\centering
-\includegraphics{My-Notebook_files/figure-latex/my-figure-1.pdf}
-\caption{\label{fig:my-figure}Proportion of Gender-Biased Nouns by Gender}
-\end{figure*}
