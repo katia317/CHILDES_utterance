@@ -12,12 +12,7 @@ header-includes:
   - \usepackage{colortbl}
 ---
 
-
-```{r source-script}
-#source("data-prep.R")
-```
-
-```{r setup, include = FALSE}
+```{r setup, include = FALSE, echo=FALSE}
 # r package library
 library(papaja)
 r_refs("r-references.bib")
@@ -52,7 +47,7 @@ The ultimate goal is to discern any significant differences in language usage ba
 
 # Data analysis
 
-```{r male-nouns}
+```{r male-nouns, echo=FALSE}
 
 m.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
 
@@ -77,7 +72,7 @@ As seen in Figure \@ref(fig:my-figure), There's gender bias in the nouns of moth
 
 # Prettified Plot
 
-```{r my-figure, fig.cap="Proportion of Gender-Biased Nouns by Gender"}
+```{r my-figure, echo=FALSE, fig.cap="Proportion of Gender-Biased Nouns by Gender"}
 combined.data <- read.csv("//Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_data.csv")
 
 library(tidyr)
@@ -125,7 +120,7 @@ As shown in Table \@ref(tab:my-table), the gender distribution in the dataset va
 
 ## *Descriptive Analysis*: Examining Maternal Gender-Biased Language Imput Patterns
 
-```{r summary-stats}
+```{r summary-stats, echo=FALSE}
 library(psych)
 library(lme4)
 
@@ -156,7 +151,7 @@ long_data <- noun_tidied_count %>%
 labels_gender = c('fnoun_proportion' = "Female-Biased", 'mnoun_proportion' = "Male-Biased")
 ```
 
-```{r gender-nouns}
+```{r gender-nouns, echo=FALSE}
 #Visualization of all stats
 
 ggplot(long_data, aes(x = target_child_sex, 
@@ -188,7 +183,7 @@ As shown in Figure \@ref(fig:gender-nouns), this descriptive analysis will invol
 
 ## *Hypothesis Testing Analysis*: Testing the Influence of Child's Gender on Maternal Language Input
 
-```{r hypothesis-analysis}
+```{r hypothesis-analysis, echo=FALSE}
 library(stats)
 noun_tidied_count <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/noun_proportion_number.csv")
 # ANOVA for male-biased nouns

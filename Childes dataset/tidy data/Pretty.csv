@@ -1,0 +1,416 @@
+corpus_name,target_child_name,target_child_age,target_child_sex,gloss,valid,about_child,about_female,about_male,unclear,id,corpus_id,collection_id,speaker_id,transcript_id
+Providence,Alex,17.8545760693238,male,where's Elmo's mommy she's pretty,1,0,1,0,0,17267462,336,21,23473,43211
+Providence,Alex,22.7889689726688,male,oh she is so pretty,1,0,1,0,0,17269009,336,21,23473,43223
+Providence,Alex,19.8546171379289,male,you think it's pretty,1,0,0,0,1,17270806,336,21,23473,43216
+Providence,Alex,17.8545760693238,male,she's pretty,1,0,1,0,0,17274772,336,21,23473,43211
+Providence,Alex,17.8545760693238,male,she's pretty,1,0,1,0,0,17275088,336,21,23473,43211
+Providence,Alex,28.361978685394,male,oh how pretty,1,0,0,0,1,17276771,336,21,23473,43232
+Providence,Alex,28.361978685394,male,how pretty,1,0,0,0,1,17279117,336,21,23473,43232
+Providence,Alex,19.8546171379289,male,wow it's pretty,1,0,0,0,1,17279180,336,21,23473,43216
+Providence,Alex,24.3947514322676,male,yep Mommy's pretty smart I know where everything is,0,0,0,0,0,17279875,336,21,23473,43224
+Providence,Alex,25.0662231257315,male,I'm looking for a pretty crayon,1,0,0,0,0,17282273,336,21,23473,43225
+Providence,Alex,25.0662231257315,male,I want like a pretty violet,1,0,0,0,0,17282341,336,21,23473,43225
+Providence,Alex,25.0662231257315,male,that one's kinda pretty,1,0,0,0,1,17282480,336,21,23473,43225
+Providence,Alex,25.0662231257315,male,that's a little pretty too,1,0,0,0,1,17282613,336,21,23473,43225
+Providence,Alex,27.460522803343,male,oh that bowl is gettin pretty full,0,0,0,0,0,17282739,336,21,23473,43229
+Providence,Alex,28.361978685394,male,that's a very pretty blue,1,0,0,0,0,17285620,336,21,23473,43232
+Providence,Alex,22.7889689726688,male,oh my bracelet is so pretty,1,0,0,0,0,17288399,336,21,23473,43223
+Providence,Alex,27.0005544261689,male,no it's so pretty,1,0,0,0,1,17288451,336,21,23473,43230
+Providence,Alex,27.0005544261689,male,oh it's so pretty,1,0,0,0,1,17288560,336,21,23473,43230
+Providence,Alex,28.821947062568,male,ooh oh that's pretty with the green,1,0,0,0,1,17293414,336,21,23473,43233
+Providence,Alex,30.6577137107538,male,oh that is so pretty,1,0,0,0,1,17293446,336,21,23473,43236
+Providence,Alex,21.7232386701986,male,makes pretty music,1,0,0,0,0,17298934,336,21,23473,43220
+Providence,Alex,23.0990369412103,male,aw how pretty look,1,0,0,0,1,17299199,336,21,23473,43218
+Providence,Alex,21.7232386701986,male,very pretty,1,0,0,0,1,17299347,336,21,23473,43220
+Providence,Alex,23.0990369412103,male,xxx make a pretty bracelet,1,0,0,0,0,17299520,336,21,23473,43218
+Providence,Alex,23.0990369412103,male,oh it's so pretty a pretty xxx,1,0,0,0,1,17299593,336,21,23473,43218
+Providence,Alex,21.7232386701986,male,this is a very pretty color,1,0,0,0,0,17300159,336,21,23473,43220
+Providence,Alex,32.3292059385203,male,that's pretty cool,0,0,0,0,0,17304614,336,21,23473,43240
+Providence,Alex,21.7232386701986,male,oh xxx getting pretty snazzy,0,0,0,0,0,17309237,336,21,23473,43220
+McCune,Alice,18.0003696174459,female,it's a pretty cow,1,0,0,0,0,2471408,73,2,3945,9612
+McCune,Alice,22.0004517546562,female,that's pretty good,0,0,0,0,0,2472680,73,2,3945,9618
+McCune,Alice,24.066202591429,female,very pretty,1,0,0,0,1,2483014,73,2,3945,9617
+Weist,Benjamin,28.4276884535617,male,pretty young for that,0,0,0,0,0,2501695,74,2,3969,9778
+Weist,Benjamin,32.1320766340171,male,wow a slide in the house they're pretty lucky,0,0,0,0,0,2505673,74,2,3969,9782
+Weist,Benjamin,28.4276884535617,male,oh pretty good okay,0,0,0,0,0,2512027,74,2,3969,9778
+McCune,David,20.000410686051,male,make her all pretty,1,0,1,0,0,2499587,73,2,3967,9771
+McCune,David,17.0003490831434,male,pretty baby,1,0,0,0,1,2506483,73,2,3967,9769
+Weist,Emma,33.0006776319842,female,that's pretty cool,0,0,0,0,0,2521757,74,2,3983,9814
+Weist,Emma,33.0006776319842,female,you be gentle pretty girl,1,1,1,0,0,2521813,74,2,3983,9814
+VanHouten,Erica,28.0005749604715,female,well that's pretty good,0,0,0,0,0,2102507,65,2,3571,7960
+VanHouten,Erica,28.0005749604715,female,look how pretty mine looks Erica,1,0,0,0,0,2107280,65,2,3571,7995
+Providence,Ethan,12.6901989773917,male,pretty wooly white rectangle,0,0,0,0,0,17332356,336,21,23488,43263
+Providence,Ethan,18.0660793856137,male,it's a pretty color huh,1,0,0,0,0,17346454,336,21,23488,43273
+Providence,Ethan,18.0660793856137,male,it's a pretty color,1,0,0,0,0,17346462,336,21,23488,43273
+Providence,Ethan,20.6575083677283,male,look how pretty it is it's colorful,1,0,0,0,1,17347106,336,21,23488,43280
+Providence,Ethan,19.8546171379289,male,that one has a pretty big shovel too,0,0,0,0,0,17347277,336,21,23488,43278
+Providence,Ethan,19.8546171379289,male,it's pretty sticky stuff,0,0,0,0,0,17348736,336,21,23488,43278
+Providence,Ethan,20.1318302223865,male,he has pretty big ears huh,0,0,0,0,0,17350217,336,21,23488,43279
+Providence,Ethan,21.131850756689,male,pretty and pink,1,0,0,0,1,17352059,336,21,23488,43282
+Providence,Ethan,20.1318302223865,male,goes pretty fast,0,0,0,0,0,17353580,336,21,23488,43279
+Providence,Ethan,23.3290211297973,male,that looks pretty silly,0,0,0,0,0,17356952,336,21,23488,43286
+Providence,Ethan,24.2304770118483,male,pretty silly looking isn't it Ethan,0,0,0,0,0,17358004,336,21,23488,43288
+Providence,Ethan,24.2304770118483,male,pretty silly looking,0,0,0,0,0,17358019,336,21,23488,43288
+Providence,Ethan,24.2304770118483,male,it's pretty isn't it,1,0,0,0,1,17359435,336,21,23488,43288
+Providence,Ethan,23.6904248547198,male,they were pretty funny looking,0,0,0,0,0,17359500,336,21,23488,43287
+Providence,Ethan,25.7233208074088,male,that's a pretty tough situation,0,0,0,0,0,17360646,336,21,23488,43290
+Providence,Ethan,25.7233208074088,male,wow it's pretty crowded on this thing isn't it,0,0,0,0,0,17360704,336,21,23488,43290
+Providence,Ethan,25.7233208074088,male,Butch is pretty heavy,0,0,0,0,0,17361084,336,21,23488,43290
+Providence,Ethan,18.6574672991232,male,it's pretty long huh,0,0,0,0,0,17362414,336,21,23488,43275
+Providence,Ethan,27.6247972237623,male,very pretty,1,0,0,0,1,17363635,336,21,23488,43293
+Providence,Ethan,28.0662847286392,male,that's a pretty special whistle in that you know where you got that whistle,0,0,0,0,0,17364747,336,21,23488,43294
+Providence,Ethan,22.3618554795786,male,it looks pretty clean to me,0,0,0,0,0,17364943,336,21,23488,43284
+Providence,Ethan,28.0662847286392,male,that's a pretty special whistle,0,0,0,0,0,17364982,336,21,23488,43294
+Providence,Ethan,27.6247972237623,male,that's the one that's pretty dirty,0,0,0,0,0,17365549,336,21,23488,43293
+Providence,Ethan,28.0662847286392,male,that's pretty funny,0,0,0,0,0,17365826,336,21,23488,43294
+Providence,Ethan,27.6247972237623,male,they're pretty silly huh,0,0,0,0,0,17368864,336,21,23488,43293
+Providence,Ethan,30.3620197539991,male,that's a pretty xxx truck,0,0,0,0,0,17369032,336,21,23488,43299
+Providence,Ethan,28.0662847286392,male,is that pretty easy,0,0,0,0,0,17369975,336,21,23488,43294
+Providence,Ethan,30.7891332470893,male,our house is pretty tall,0,0,0,0,0,17370180,336,21,23488,43300
+Providence,Ethan,30.7891332470893,male,this beige house is pretty tall,0,0,0,0,0,17370205,336,21,23488,43300
+Providence,Ethan,23.6904248547198,male,it's pretty cold,0,0,0,0,0,17370373,336,21,23488,43287
+Providence,Ethan,29.8548224809544,male,that's a pretty big fall Thomas,0,0,0,0,0,17371290,336,21,23488,43298
+Providence,Ethan,29.8548224809544,male,that's a pretty big fall,0,0,0,0,0,17371310,336,21,23488,43298
+Providence,Ethan,23.6904248547198,male,yeah that's a pretty one,1,0,0,0,1,17372210,336,21,23488,43287
+Providence,Ethan,26.2633729645373,male,not much space did you see outside how pretty it is,1,0,0,0,0,17372369,336,21,23488,43291
+Providence,Ethan,31.8220086654757,male,that's pretty narrow too,0,0,0,0,0,17372636,336,21,23488,43302
+Providence,Ethan,28.0662847286392,male,that's pretty nice huh,0,0,0,0,0,17374611,336,21,23488,43294
+Providence,Ethan,28.0662847286392,male,that was pretty nice,0,0,0,0,0,17374816,336,21,23488,43294
+Providence,Ethan,25.7233208074088,male,I think she's a pretty train don't you,1,0,1,0,0,17376753,336,21,23488,43290
+Providence,Ethan,30.3620197539991,male,xxx that's a pretty good one huh,0,0,0,0,0,17377649,336,21,23488,43299
+Providence,Ethan,30.7891332470893,male,you were a pretty good sharer when he was over to play,0,0,0,0,0,17380277,336,21,23488,43300
+Providence,Ethan,28.6248177580648,male,they don't look brown to me they look pretty white,0,0,0,0,0,17380296,336,21,23488,43295
+Providence,Ethan,28.6248177580648,male,feels pretty nice huh,0,0,0,0,0,17381224,336,21,23488,43295
+Providence,Ethan,28.6248177580648,male,this is pretty goopy,0,0,0,0,0,17381250,336,21,23488,43295
+Providence,Ethan,29.000595494774,male,yeah you had strawberry it was pretty yummy huh,0,0,0,0,0,17381294,336,21,23488,43297
+Providence,Ethan,29.8548224809544,male,that was pretty up,0,0,0,0,0,17381674,336,21,23488,43298
+Providence,Ethan,30.7891332470893,male,you have a pretty big eye,0,0,0,0,0,17381856,336,21,23488,43300
+Providence,Ethan,32.3292059385203,male,oh that's a pretty color green,1,0,0,0,0,17383235,336,21,23488,43303
+Providence,Ethan,31.8220086654757,male,he liked to tie knots in the sleeves of her pretty dresses,1,0,1,0,0,17383361,336,21,23488,43302
+Providence,Ethan,31.8220086654757,male,her pretty dresses stayed nice and pretty,2,0,2,0,0,17384016,336,21,23488,43302
+Providence,Ethan,32.3292059385203,male,pretty yummy huh,0,0,0,0,0,17384224,336,21,23488,43303
+Providence,Ethan,29.493418756032,male,you're pretty good at getting undressed,0,0,0,0,0,17387394,336,21,23488,43296
+Providence,Ethan,29.493418756032,male,pretty soon you'll be big enough and you'll know how to dress yourself,0,0,0,0,0,17387424,336,21,23488,43296
+Providence,Ethan,33.6577753136615,male,xxx heh that's pretty smart,0,0,0,0,0,17387684,336,21,23488,43306
+Providence,Ethan,29.493418756032,male,voila crash that's a pretty nice butterfly,1,0,0,0,0,17390513,336,21,23488,43296
+Providence,Ethan,35.0335735846732,male,xxx it must be pretty hot,0,0,0,0,0,17391366,336,21,23488,43310
+Providence,Ethan,31.2963305201339,male,I think we've got a pretty good Pooh there,0,0,0,0,0,17395325,336,21,23488,43301
+Providence,Ethan,34.5920860797963,male,I'll show you we could scoop up some of those pretty beads,1,0,0,0,0,17395332,336,21,23488,43309
+Providence,Ethan,34.5920860797963,male,it looks pretty that way,0,0,0,0,0,17398121,336,21,23488,43309
+Providence,Ethan,35.0335735846732,male,that's pretty good,0,0,0,0,0,17399513,336,21,23488,43310
+Providence,Ethan,34.5920860797963,male,xxx that's pretty funny,0,0,0,0,0,17400043,336,21,23488,43309
+Providence,Ethan,34.5920860797963,male,that's a very pretty load and it matches the bed of the truck,0,0,0,0,0,17400998,336,21,23488,43309
+Providence,Ethan,34.5920860797963,male,it is very pretty sweetie,1,0,0,0,1,17401043,336,21,23488,43309
+Providence,Ethan,34.5920860797963,male,if it's pretty and you know it,1,0,0,0,1,17401053,336,21,23488,43309
+Providence,Ethan,34.5920860797963,male,if it's pretty and you know it clap your hands,1,0,0,0,1,17401066,336,21,23488,43309
+Providence,Ethan,35.0335735846732,male,that's pretty good,0,0,0,0,0,17401599,336,21,23488,43310
+Providence,Ethan,34.5920860797963,male,how about this one looks pretty clean,0,0,0,0,0,17401671,336,21,23488,43309
+Providence,Ethan,34.5920860797963,male,and he has two pretty big ears that stick out and then he has little black eyes,0,0,0,0,0,17401891,336,21,23488,43309
+Providence,Ethan,34.5920860797963,male,and then he has a pretty big smile,0,0,0,0,0,17401912,336,21,23488,43309
+Providence,Ethan,33.0006776319842,male,that's pretty close though,0,0,0,0,0,17402008,336,21,23488,43304
+Providence,Ethan,33.2306618205713,male,xxx it looks like your socks got pretty damp too,0,0,0,0,0,17403168,336,21,23488,43305
+Providence,Ethan,34.1649725867061,male,that's pretty heavy huh,0,0,0,0,0,17403579,336,21,23488,43307
+Providence,Ethan,34.1649725867061,male,that's pretty good as new,0,0,0,0,0,17403965,336,21,23488,43307
+Providence,Ethan,34.5920860797963,male,yeah it's pretty sunny right there on the corner there,0,0,0,0,0,17404063,336,21,23488,43309
+Providence,Ethan,33.0006776319842,male,now that's pretty silly,0,0,0,0,0,17404562,336,21,23488,43304
+Providence,Ethan,33.2306618205713,male,he looks pretty big and fat,0,0,0,0,0,17407194,336,21,23488,43305
+Providence,Ethan,33.0006776319842,male,he's pretty neat,0,0,0,0,0,17407960,336,21,23488,43304
+Providence,Ethan,33.2306618205713,male,that's pretty funny xxx,0,0,0,0,0,17410509,336,21,23488,43305
+Providence,Ethan,33.2306618205713,male,xxx that looks pretty funny,0,0,0,0,0,17411026,336,21,23488,43305
+McCune,Jase,24.0004928232613,male,you look so pretty,1,1,0,1,0,2487369,73,2,3954,9676
+McCune,Jase,22.0004517546562,male,pretty thank_you,1,0,0,0,1,2488643,73,2,3954,9673
+Warren,Jeff,21.0004312203536,male,that's a pretty yellow block,1,0,0,0,0,2086559,63,2,3462,7894
+Warren,Jeff,21.0004312203536,male,you're doing pretty good,0,0,0,0,0,2086589,63,2,3462,7894
+Warren,Jeff,21.0004312203536,male,it's a pretty blue block isn't it Adam,1,0,0,0,0,2087604,63,2,3462,7894
+Warren,Jeff,21.0004312203536,male,is that a pretty blue block,1,0,0,0,0,2087612,63,2,3462,7894
+Warren,Jeff,21.0004312203536,male,here's a pretty yellow one,1,0,0,0,0,2087694,63,2,3462,7894
+Weist,Jillian,25.9533049959958,female,he's so pretty,1,0,0,1,0,2536028,74,2,3989,9842
+Weist,Jillian,25.9533049959958,female,does she have a pretty bow in her hair,1,0,1,0,0,2536505,74,2,3989,9842
+Weist,Jillian,25.5590463869895,female,that's pretty good,0,0,0,0,0,2537458,74,2,3989,9840
+Weist,Jillian,28.2962689172262,female,what were you drawing on the on the board pretty pictures,1,0,0,0,0,2539494,74,2,3989,9847
+Weist,Jillian,28.2962689172262,female,seems pretty empty sweetie pie want me to take it,0,0,0,0,0,2541097,74,2,3989,9847
+Weist,Jillian,26.1976631963695,female,it was pretty soft,0,0,0,0,0,2548635,74,2,3989,9843
+Weist,Jillian,31.0006365633791,female,somebody was moving a moving some furniture and it sounded pretty loud,0,0,0,0,0,2548636,74,2,3989,9856
+Weist,Jillian,33.526355777326,female,and she gave her the pretty dress,1,0,1,0,0,2550765,74,2,3989,9858
+Weist,Jillian,33.526355777326,female,and she got the pretty dress and what else did she get on her feet,1,0,1,0,0,2550827,74,2,3989,9858
+Weist,Jillian,29.8548224809544,female,what a pretty name for a horse,1,0,0,0,0,2553632,74,2,3989,9853
+Weist,Jillian,29.8548224809544,female,and you're a very pretty color,1,0,0,0,0,2553644,74,2,3989,9853
+Weist,Jillian,29.8548224809544,female,that's pretty new,0,0,0,0,0,2562336,74,2,3989,9853
+Weist,Jillian,25.0333682416477,female,that's a pretty pretty song,2,0,0,0,0,2565146,74,2,3989,9838
+McCune,Laura,14.0002874802357,female,you're wearing a pretty ring,1,0,1,0,0,2474032,73,2,3949,9625
+McCune,Laura,14.0002874802357,female,you're gonna get all pretty,1,1,1,0,0,2475855,73,2,3949,9625
+McCune,Laura,18.0003696174459,female,oh how pretty,1,0,0,0,1,2477337,73,2,3949,9629
+McCune,Laura,20.000410686051,female,how pretty,1,0,0,0,1,2477857,73,2,3949,9631
+McCune,Laura,23.0004722889587,female,it's pretty good,0,0,0,0,0,2479670,73,2,3949,9634
+McCune,Laura,21.0004312203536,female,she has a very pretty red jacket and pretty blue pants and red shoes,2,0,2,0,0,2481635,73,2,3949,9632
+McCune,Laura,20.000410686051,female,it's a pretty jacket,1,0,0,0,0,2483620,73,2,3949,9631
+McCune,Laura,20.000410686051,female,her hair is pretty messy isn't it,0,0,0,0,0,2483643,73,2,3949,9631
+Providence,Lily,14.0659972484035,female,Po's pretty big,0,0,0,0,0,17386203,336,21,23497,43312
+Providence,Lily,13.5587999753588,female,very pretty honey,1,0,0,0,1,17389401,336,21,23497,43311
+Providence,Lily,13.5587999753588,female,that is pretty silly,0,0,0,0,0,17389599,336,21,23497,43311
+Providence,Lily,16.7559908827697,female,hm yeah that's pretty silly,0,0,0,0,0,17392561,336,21,23497,43318
+Providence,Lily,17.2631881558143,female,Daisy's lookin pretty good woof woof woof woof woof woof,0,0,0,0,0,17393751,336,21,23497,43319
+Providence,Lily,15.8545350007187,female,that makes for a pretty good story,0,0,0,0,0,17394064,336,21,23497,43317
+Providence,Lily,16.7559908827697,female,I was pretty scared especially when I saw the police coming but my parents were with them and they were happy to see me,0,0,0,0,0,17394361,336,21,23497,43318
+Providence,Lily,16.7559908827697,female,that's pretty silly,0,0,0,0,0,17395080,336,21,23497,43318
+Providence,Lily,17.2631881558143,female,pretty snazzy wouldn't ya say,0,0,0,0,0,17395382,336,21,23497,43319
+Providence,Lily,15.8545350007187,female,yeah did you draw that pretty picture on there,1,0,0,0,0,17397800,336,21,23497,43317
+Providence,Lily,15.8545350007187,female,that's your pretty drawing,1,0,0,0,0,17398133,336,21,23497,43317
+Providence,Lily,15.8545350007187,female,that's your pretty picture you want me to find you a pen so you can draw,1,0,0,0,0,17398148,336,21,23497,43317
+Providence,Lily,15.8545350007187,female,that's pretty nice,0,0,0,0,0,17398673,336,21,23497,43317
+Providence,Lily,17.6903016489045,female,yeah and a parrot look at the pretty parrot,1,0,0,0,0,17398820,336,21,23497,43320
+Providence,Lily,17.6903016489045,female,it's pretty it's yellow and green,1,0,0,0,1,17400381,336,21,23497,43320
+Providence,Lily,15.7559703484671,female,that's pretty silly,0,0,0,0,0,17400438,336,21,23497,43316
+Providence,Lily,16.7559908827697,female,that's is pretty silly,0,0,0,0,0,17404535,336,21,23497,43318
+Providence,Lily,17.2631881558143,female,yeah that's pretty great,0,0,0,0,0,17405554,336,21,23497,43319
+Providence,Lily,14.4274009733259,female,she got pretty good,0,0,0,0,0,17405914,336,21,23497,43313
+Providence,Lily,15.8545350007187,female,that's pretty silly,0,0,0,0,0,17405929,336,21,23497,43317
+Providence,Lily,15.4274215076285,female,that's pretty silly,0,0,0,0,0,17406881,336,21,23497,43315
+Providence,Lily,14.9202242345839,female,ooh she got pretty good at making sand+castles,0,0,0,0,0,17406932,336,21,23497,43314
+Providence,Lily,14.4274009733259,female,look at the pretty colors,1,0,0,0,0,17407519,336,21,23497,43313
+Providence,Lily,18.3617733423684,female,oh_my_goodness that's a pretty dragonfly isn't it,1,0,0,0,0,17408152,336,21,23497,43321
+Providence,Lily,18.3617733423684,female,very pretty,1,0,0,0,1,17408505,336,21,23497,43321
+Providence,Lily,18.3617733423684,female,huh look how pretty,1,0,0,0,1,17408578,336,21,23497,43321
+Providence,Lily,18.3617733423684,female,it's a pretty flower,1,0,0,0,0,17408627,336,21,23497,43321
+Providence,Lily,18.3617733423684,female,very pretty,1,0,0,0,1,17408764,336,21,23497,43321
+Providence,Lily,17.6903016489045,female,oh her oot what a pretty flower,1,0,0,0,0,17409354,336,21,23497,43320
+Providence,Lily,14.4274009733259,female,can I see your pretty bracelet,1,0,1,0,0,17409690,336,21,23497,43313
+Providence,Lily,17.6903016489045,female,that's a pretty good idea,0,0,0,0,0,17410950,336,21,23497,43320
+Providence,Lily,17.6903016489045,female,pretty pink,0,0,0,0,0,17413002,336,21,23497,43320
+Providence,Lily,17.6903016489045,female,that's pretty silly,0,0,0,0,0,17413444,336,21,23497,43320
+Providence,Lily,17.6903016489045,female,huh I don't think it's too bad I think Birthday_Bear's pretty clean honey we just washed her,0,0,0,0,0,17414209,336,21,23497,43320
+Providence,Lily,21.3946898293599,female,she's pretty good with the plurals,0,0,0,0,0,17415112,336,21,23497,43328
+Providence,Lily,20.4603790632251,female,she's a pretty lady huh,1,0,1,0,0,17416157,336,21,23497,43326
+Providence,Lily,19.0332450358324,female,oh she got pretty good,0,0,0,0,0,17418843,336,21,23497,43323
+Providence,Lily,24.1319123595967,female,pretty simple song right,0,0,0,0,0,17421615,336,21,23497,43334
+Providence,Lily,21.8218033224502,female,very pretty,1,0,0,0,1,17421797,336,21,23497,43329
+Providence,Lily,19.0332450358324,female,that's pretty silly I never noticed that before,0,0,0,0,0,17422794,336,21,23497,43323
+Providence,Lily,19.0332450358324,female,pretty all true,0,0,0,0,0,17424005,336,21,23497,43323
+Providence,Lily,24.1319123595967,female,I it looks pretty real though doesn't it,0,0,0,0,0,17425410,336,21,23497,43334
+Providence,Lily,20.8874925563153,female,oh the bow is tied on top how pretty,1,0,0,0,0,17426169,336,21,23497,43327
+Providence,Lily,22.7232592045011,female,should we have a nice new pretty floor,1,0,0,0,0,17426482,336,21,23497,43331
+Providence,Lily,24.1319123595967,female,ooh so pretty,1,0,0,0,1,17426877,336,21,23497,43334
+Providence,Lily,24.1319123595967,female,so pretty,1,0,0,0,1,17426910,336,21,23497,43334
+Providence,Lily,22.2961457114109,female,it's pretty now,1,0,0,0,1,17427830,336,21,23497,43330
+Providence,Lily,23.8546992751391,female,but I'm like I live in fear that she's gonna lose that fish because she loves it so much although she's been pretty good we've lost a couple things,0,0,0,0,0,17427984,336,21,23497,43333
+Providence,Lily,23.8546992751391,female,um left them in stores and whatnot she's been pretty good about it,0,0,0,0,0,17428013,336,21,23497,43333
+Providence,Lily,23.8546992751391,female,yeah Dora's her new obsession pretty much,0,0,0,0,0,17429369,336,21,23497,43333
+Providence,Lily,19.0332450358324,female,hehe that's pretty silly,0,0,0,0,0,17431822,336,21,23497,43323
+Providence,Lily,21.8218033224502,female,what a mess said Jonathan we'd better wipe it up pretty quickly,0,0,0,0,0,17432089,336,21,23497,43329
+Providence,Lily,23.8546992751391,female,they seem pretty nice,0,0,0,0,0,17432117,336,21,23497,43333
+Providence,Lily,25.4933366188217,female,you with your pretty buttons,1,0,1,0,0,17432335,336,21,23497,43339
+Providence,Lily,23.8546992751391,female,the park Grover's painting a pretty picture,1,0,0,0,0,17432463,336,21,23497,43333
+Providence,Lily,24.7561551571901,female,and did we see that very pretty bust of a woman,1,0,1,0,0,17433091,336,21,23497,43337
+Providence,Lily,18.5917575309555,female,that's pretty sad,0,0,0,0,0,17436046,336,21,23497,43322
+Providence,Lily,19.0332450358324,female,it's pretty silly isn't it,0,0,0,0,0,17437389,336,21,23497,43323
+Providence,Lily,20.8874925563153,female,well the snow's not so dirty the snow looks nice and pretty and clean,1,0,0,0,0,17439034,336,21,23497,43327
+Providence,Lily,25.2633524302347,female,it looks pretty sunny outside,0,0,0,0,0,17440646,336,21,23497,43338
+Providence,Lily,18.5917575309555,female,I think Sugar feels pretty good about being in the stroller,0,0,0,0,0,17440688,336,21,23497,43322
+Providence,Lily,24.3618965481837,female,yeah soda or juice they look pretty much the same in this picture,0,0,0,0,0,17441290,336,21,23497,43335
+Providence,Lily,27.1648288465882,female,mm what's the state right above Texas it's pretty small,0,0,0,0,0,17442709,336,21,23497,43345
+Providence,Lily,18.5917575309555,female,they are pretty small aren't they,0,0,0,0,0,17443356,336,21,23497,43322
+Providence,Lily,28.2962689172262,female,Gabi's eyes are very dark brown she has pretty dark brown eyes,1,0,1,0,0,17444070,336,21,23497,43348
+Providence,Lily,28.0662847286392,female,nearby a young prince heard Aurora's pretty voice,1,0,1,0,0,17444356,336,21,23497,43347
+Providence,Lily,18.5917575309555,female,pretty neat huh,0,0,0,0,0,17447175,336,21,23497,43322
+Providence,Lily,28.0662847286392,female,it's pretty cold up in Canada,0,0,0,0,0,17448537,336,21,23497,43347
+Providence,Lily,27.1648288465882,female,and pretty soon Ronnie is gonna have a new baby to,0,0,0,0,0,17448755,336,21,23497,43345
+Providence,Lily,23.2304564775457,female,mm yeah the n o word we pretty much hear that constant,0,0,0,0,0,17449626,336,21,23497,43332
+Providence,Lily,28.2962689172262,female,she has a very pretty voice was she singing,1,0,1,0,0,17450704,336,21,23497,43348
+Providence,Lily,28.2962689172262,female,she stared at the image of Ariel and Flounder in her crystal ball this pretty little daughter of his may be the key to Tritan's undoing she said,1,0,1,0,0,17450827,336,21,23497,43348
+Providence,Lily,28.2962689172262,female,but meanwhile Ursula hatched a plan to keep Eric from falling in love with Ariel she turned herself into a pretty girl named,1,0,1,0,0,17451043,336,21,23497,43348
+Providence,Lily,31.0006365633791,female,right here on your pretty dress,1,0,1,0,0,17452102,336,21,23497,43358
+Providence,Lily,28.5262531058133,female,it is a very very pretty day,1,0,0,0,0,17452265,336,21,23497,43349
+Providence,Lily,31.5263147087209,female,with a pretty color like pink,1,0,0,0,0,17453027,336,21,23497,43360
+Providence,Lily,30.7562783630054,female,aw Franklin's pretty sad,0,0,0,0,0,17453971,336,21,23497,43357
+Providence,Lily,31.5263147087209,female,that's pretty neat,0,0,0,0,0,17455472,336,21,23497,43360
+Providence,Lily,30.3948746380829,female,whoa xxx xxx what do you think we should get for Ronnie's new baby think we should buy a pretty outfit for her whaddya think,1,0,1,0,0,17455576,336,21,23497,43356
+Providence,Lily,30.3948746380829,female,well the red one I think we've pretty much lost for good the yellow one let me just go throw this out Sweetie Pie,0,0,0,0,0,17456575,336,21,23497,43356
+Providence,Lily,31.9205733177273,female,pretty nice,0,0,0,0,0,17456601,336,21,23497,43362
+Providence,Lily,31.9205733177273,female,oh a butterfly how pretty that's called a monarch butterfly,1,0,0,0,0,17457161,336,21,23497,43362
+Providence,Lily,31.9205733177273,female,I'm not sure what kind of butterfly it is but it's pretty huh,1,0,0,0,0,17457381,336,21,23497,43362
+Providence,Lily,31.9205733177273,female,oh how pretty,1,0,0,0,1,17457879,336,21,23497,43362
+Providence,Lily,29.8548224809544,female,that looks pretty good right,0,0,0,0,0,17458227,336,21,23497,43353
+Providence,Lily,31.9205733177273,female,xxx aw look at the pretty paper daisies you can make,1,0,0,0,0,17459430,336,21,23497,43362
+Providence,Lily,31.9205733177273,female,yeah but this would be a pretty thing to make one day,1,0,0,0,0,17459469,336,21,23497,43362
+Providence,Lily,31.9205733177273,female,looks pretty snazzy,0,0,0,0,0,17459542,336,21,23497,43362
+Providence,Lily,30.7562783630054,female,whoever it is must be pretty brave to live there says Hilda,0,0,0,0,0,17459567,336,21,23497,43357
+Providence,Lily,29.8548224809544,female,but you're pretty big,0,0,0,0,0,17459941,336,21,23497,43353
+Providence,Lily,33.1320971683197,female,that's pretty nice,0,0,0,0,0,17460291,336,21,23497,43366
+Providence,Lily,31.9205733177273,female,oh look at all these eggs that you can decorate look how pretty these are,1,0,0,0,0,17460591,336,21,23497,43362
+Providence,Lily,28.9205117148196,female,that's pretty funny,0,0,0,0,0,17460798,336,21,23497,43350
+Providence,Lily,33.1320971683197,female,that's pretty good right xxx,0,0,0,0,0,17461327,336,21,23497,43366
+Providence,Lily,32.4277705907719,female,oh how pretty,1,0,0,0,1,17463893,336,21,23497,43364
+Providence,Lily,26.4933571531243,female,very pretty,1,0,0,0,1,17464420,336,21,23497,43343
+Providence,Lily,31.9205733177273,female,that's pretty neat,0,0,0,0,0,17464459,336,21,23497,43362
+Providence,Lily,31.9205733177273,female,very pretty,1,0,0,0,1,17464648,336,21,23497,43362
+Providence,Lily,33.1320971683197,female,wow that's pretty neat,0,0,0,0,0,17466827,336,21,23497,43366
+Providence,Lily,33.5920655454937,female,these are pretty neat,0,0,0,0,0,17467233,336,21,23497,43368
+Providence,Lily,33.5920655454937,female,xxx that's pretty neat,0,0,0,0,0,17467322,336,21,23497,43368
+Providence,Lily,33.5920655454937,female,and oh yes there's the pirate ship and the construction site that's pretty neat too isn't it,0,0,0,0,0,17467481,336,21,23497,43368
+Providence,Lily,30.7562783630054,female,that's a pretty big Valentine,0,0,0,0,0,17468303,336,21,23497,43357
+Providence,Lily,34.2635372389577,female,that's why she has such a pretty voice,1,0,1,0,0,17470586,336,21,23497,43370
+Providence,Lily,31.6905891291402,female,that's a pretty place called Central park,1,0,0,0,0,17470735,336,21,23497,43361
+Providence,Lily,27.5590874555946,female,that's pretty nice,0,0,0,0,0,17471138,336,21,23497,43346
+Providence,Lily,34.2635372389577,female,but it's it's feeling pretty good right now,0,0,0,0,0,17471305,336,21,23497,43370
+Providence,Lily,31.6905891291402,female,xxx that's pretty silly,0,0,0,0,0,17471611,336,21,23497,43361
+Providence,Lily,33.7563399659131,female,do you think this is a pretty color Honey,1,0,0,0,0,17473108,336,21,23497,43369
+Providence,Lily,33.7563399659131,female,do you think this is a pretty color,1,0,0,0,0,17473174,336,21,23497,43369
+Providence,Lily,33.7563399659131,female,that is pretty that red,1,0,0,0,0,17473261,336,21,23497,43369
+Providence,Lily,33.7563399659131,female,that's pretty yeah,1,0,0,0,1,17473321,336,21,23497,43369
+Providence,Lily,33.7563399659131,female,wow that's pretty huh,1,0,0,0,1,17473474,336,21,23497,43369
+Providence,Lily,33.7563399659131,female,that is a pretty color,1,0,0,0,0,17473643,336,21,23497,43369
+Providence,Lily,33.7563399659131,female,these are pretty too,1,0,0,0,1,17473656,336,21,23497,43369
+Providence,Lily,34.2635372389577,female,pretty cute,0,0,0,0,0,17474149,336,21,23497,43370
+Providence,Lily,32.6248998952751,female,that's pretty silly,0,0,0,0,0,17474458,336,21,23497,43365
+Providence,Lily,31.6905891291402,female,wow a pretty new bag look at all the stuff you can fit in there huh,0,0,0,0,0,17475942,336,21,23497,43361
+Providence,Lily,32.6248998952751,female,Pocahontas has pretty xxx black hair doesn't she,1,0,1,0,0,17476680,336,21,23497,43365
+Providence,Lily,32.6248998952751,female,that is so pretty,1,0,0,0,1,17478748,336,21,23497,43365
+Providence,Lily,29.1977247992772,female,what are you doing there's your little tushie and you're playing in the bathtub in your little swimming pool and you're absolutely naked that pretty silly xxx,0,0,0,0,0,17478803,336,21,23497,43351
+Providence,Lily,29.1977247992772,female,oh he's gonna ask someone if he can use that apple car that's nice that's pretty good manners for an elephant,0,0,0,0,0,17479544,336,21,23497,43351
+Providence,Lily,33.296371588739,female,but it's pretty it has a little purple it has a little blue sparkly center,1,0,0,0,1,17479612,336,21,23497,43367
+Providence,Lily,33.296371588739,female,that's pretty neat,0,0,0,0,0,17481365,336,21,23497,43367
+Providence,Lily,32.6248998952751,female,because we have your new pretty sheets your pink and purple and green sheets won't that be nice,1,0,1,0,0,17481854,336,21,23497,43365
+Providence,Lily,30.132035565412,female,sure is pretty said flounder,1,0,0,0,1,17482697,336,21,23497,43354
+Providence,Lily,34.9206349206349,female,that was over a year ago you were pretty little,0,0,0,0,0,17487812,336,21,23497,43372
+Providence,Lily,33.7563399659131,female,yeah she's wearing a very pretty white dress,1,0,1,0,0,17489078,336,21,23497,43369
+Providence,Lily,32.1977864021848,female,oh you know what they look pretty good to me today,0,0,0,0,0,17498433,336,21,23497,43363
+Weist,Matt,28.9205117148196,male,oh fish now that's pretty cool,0,0,0,0,0,2553685,74,2,3997,9865
+Weist,Matt,27.5590874555946,male,they actually did have a_lot of toys there at the hair dresser place they had tons of them it was pretty cool,0,0,0,0,0,2553779,74,2,3997,9861
+Weist,Matt,28.9205117148196,male,that's a pretty loud noise,0,0,0,0,0,2553903,74,2,3997,9865
+Weist,Matt,28.9205117148196,male,wow now that's pretty cool they've got all kinds of stuff in here,0,0,0,0,0,2554230,74,2,3997,9865
+Weist,Matt,28.9205117148196,male,it's pretty loud now,0,0,0,0,0,2555684,74,2,3997,9865
+Weist,Matt,28.9205117148196,male,it's pretty loud though,0,0,0,0,0,2555697,74,2,3997,9865
+Weist,Matt,29.5919834082835,male,a cage I didn't even know he knew that word cage that's pretty good,0,0,0,0,0,2556743,74,2,3997,9868
+Weist,Matt,28.9205117148196,male,how about this guy he's still doing actually pretty good,0,0,0,0,0,2557194,74,2,3997,9865
+Weist,Matt,27.5590874555946,male,balloon yeah it's pretty sad right now isn't it,0,0,0,0,0,2557794,74,2,3997,9861
+Weist,Matt,29.3291443356126,male,he got a couple little scratches he didn't like it we were pretty upset we felt bad for him,0,0,0,0,0,2558105,74,2,3997,9867
+Weist,Matt,27.7562167600977,male,look at this isn't this pretty how the Play_Doh came out we mixed together the purple and the green isn't that pretty,2,0,0,0,0,2560638,74,2,3997,9862
+Weist,Matt,30.3620197539991,male,is that pretty big,0,0,0,0,0,2560651,74,2,3997,9869
+Weist,Matt,31.2306207519662,male,that's pretty cool,0,0,0,0,0,2562180,74,2,3997,9870
+Weist,Matt,32.6248998952751,male,it's still pretty tricky to get them all there,0,0,0,0,0,2576844,74,2,3997,9873
+Providence,Naima,15.3945666235446,female,shoulda heard that xxx pretty loud if hers is working,0,0,0,0,0,17503750,336,21,23511,43398
+Providence,Naima,12.4602147888047,female,pear is usually pretty yummy,0,0,0,0,0,17505486,336,21,23511,43391
+Providence,Naima,16.3288773896795,female,that's pretty noisy,0,0,0,0,0,17512076,336,21,23511,43401
+Providence,Naima,19.5589231811742,female,right still there's a pretty what,1,0,0,0,1,17525384,336,21,23511,43411
+Providence,Naima,16.3288773896795,female,look at the pretty flowers,1,0,0,0,0,17527283,336,21,23511,43401
+Providence,Naima,19.3289389925871,female,pretty much the first time I heard that,0,0,0,0,0,17528197,336,21,23511,43412
+Providence,Naima,18.1317891537814,female,shh Kim keeps quiet and still there's a pretty bird in the yard there's the bird,1,0,0,0,0,17535425,336,21,23511,43407
+Providence,Naima,20.0332655701349,female,those pieces can get pretty slippery you right,0,0,0,0,0,17537645,336,21,23511,43414
+Providence,Naima,21.8218033224502,female,that's pretty neat,0,0,0,0,0,17551081,336,21,23511,43423
+Providence,Naima,22.8875336249204,female,eat well my pretty chicken he cried get nice and fat for my,1,0,0,0,0,17551765,336,21,23511,43426
+Providence,Naima,22.8875336249204,female,eat well my pretty chicken he cried,1,0,0,0,0,17551846,336,21,23511,43426
+Providence,Naima,22.8875336249204,female,he's pretty devious isn'e,0,0,0,0,0,17551884,336,21,23511,43426
+Providence,Naima,22.8875336249204,female,eat well my pretty chicken he cried,1,0,0,0,0,17551929,336,21,23511,43426
+Providence,Naima,22.8875336249204,female,eat well my pretty chicken,1,0,0,0,0,17553242,336,21,23511,43426
+Providence,Naima,22.8875336249204,female,eat well my pretty chicken he cried get,1,0,0,0,0,17553377,336,21,23511,43426
+Providence,Naima,23.2304564775457,female,yeah that's a pretty silly picture,0,0,0,0,0,17558756,336,21,23511,43427
+Providence,Naima,26.0662436600341,female,you're having a pretty good breakfast,0,0,0,0,0,17566863,336,21,23511,43438
+Providence,Naima,29.493418756032,female,it looks pretty stable,0,0,0,0,0,17569994,336,21,23511,43450
+Providence,Naima,27.5262325715107,female,you're pretty scary for a bear,0,0,0,0,0,17571709,336,21,23511,43442
+Providence,Naima,27.7890716441816,female,I think you're doing a pretty good job actually,0,0,0,0,0,17573260,336,21,23511,43443
+Providence,Naima,30.3620197539991,female,pretty dry,0,0,0,0,0,17574432,336,21,23511,43455
+Providence,Naima,29.4605638719481,female,it's a pretty big tower though,0,0,0,0,0,17575302,336,21,23511,43449
+Providence,Naima,29.8876773650383,female,that's pretty funny,0,0,0,0,0,17578905,336,21,23511,43454
+Providence,Naima,29.8876773650383,female,that's pretty funny Naima,0,0,0,0,0,17578927,336,21,23511,43454
+Providence,Naima,29.5591285241997,female,that's pretty nutty,0,0,0,0,0,17580972,336,21,23511,43451
+Providence,Naima,24.1319123595967,female,that's a pretty good view of the couch,0,0,0,0,0,17583025,336,21,23511,43432
+Providence,Naima,29.8876773650383,female,this color red is very pretty,1,0,0,0,0,17584925,336,21,23511,43454
+Providence,Naima,29.8876773650383,female,sounds pretty unpleasant to me,0,0,0,0,0,17586875,336,21,23511,43454
+Providence,Naima,29.5591285241997,female,no that was a pretty wet diaper,0,0,0,0,0,17587994,336,21,23511,43451
+Providence,Naima,31.6577342450564,female,that's pretty sick for a bear,0,0,0,0,0,17590276,336,21,23511,43459
+Providence,Naima,34.0335530503706,female,oh that looks pretty safe,0,0,0,0,0,17598814,336,21,23511,43465
+Providence,Naima,33.5592106614099,female,it looks pretty cozy in that piece of ice,0,0,0,0,0,17598853,336,21,23511,43463
+Providence,Naima,34.0335530503706,female,that's a pretty hard one,0,0,0,0,0,17601420,336,21,23511,43465
+Providence,Naima,35.7563810345182,female,that's pretty late for small child of a bear,0,0,0,0,0,17601833,336,21,23511,43471
+Providence,Naima,35.7563810345182,female,which is pretty good,0,0,0,0,0,17607317,336,21,23511,43471
+Providence,Naima,28.8876568307357,female,those are kinda big pieces so you wanna chew them pretty well okay,0,0,0,0,0,17608368,336,21,23511,43447
+Providence,Naima,33.7563399659131,female,she's pretty old to be in nursery school,0,0,0,0,0,17610324,336,21,23511,43464
+Providence,Naima,28.8876568307357,female,hm it's pretty hot actually,0,0,0,0,0,17610543,336,21,23511,43447
+Gleason,Nanette,26.1976631963695,female,no she's pretty good about saying she's xxx fool around now,0,0,0,0,0,1003414,49,2,2611,4935
+Gleason,Nanette,25.1319328938993,female,that's pretty cheap for a thing of mustard,0,0,0,0,0,1041053,49,2,2611,4981
+Gleason,Patricia,29.9862420172899,female,Usher that's a pretty funny looking glove you've got there,0,0,0,0,0,1005197,49,2,2624,4938
+McCune,Rick,17.0003490831434,male,oh how pretty,1,0,0,0,1,2487835,73,2,3960,9739
+McCune,Rick,17.0003490831434,male,how pretty,1,0,0,0,1,2488415,73,2,3960,9739
+McCune,Rick,19.0003901517485,male,you're pretty strong,0,0,0,0,0,2489343,73,2,3960,9740
+McCune,Rick,22.0004517546562,male,how pretty,1,0,0,0,1,2490645,73,2,3960,9744
+McCune,Rick,21.0004312203536,male,you look so pretty,1,1,0,1,0,2499492,73,2,3960,9743
+VanHouten,Robert,28.0005749604715,male,make pretty designs,1,0,0,0,0,2107169,65,2,3549,8013
+VanHouten,Sarah,28.0005749604715,female,make a pretty necklace,1,0,0,0,0,2108292,65,2,3583,8012
+VanHouten,Tommy,28.0005749604715,male,how pretty,1,0,0,0,1,2109575,65,2,3601,8011
+VanHouten,Tommy,28.0005749604715,male,how pretty,1,0,0,0,1,2109602,65,2,3601,8011
+Gleason,Victor,28.4933982217294,male,I still don't want some no I usu I'm pretty consistent I will give you a no on a popsicle almost any day of the week,0,0,0,0,0,1014603,49,2,2648,4940
+Providence,Violet,14.0002874802357,female,you look so pretty,1,1,1,0,0,17602819,336,21,23523,43477
+Providence,Violet,14.0002874802357,female,you look pretty girl,1,1,1,0,0,17602820,336,21,23523,43477
+Providence,Violet,14.0002874802357,female,it's a pretty girl,1,0,1,0,0,17602824,336,21,23523,43477
+Providence,Violet,14.0002874802357,female,oh it's a pretty pretty it's a pretty pretty jewelry,4,0,0,0,0,17602939,336,21,23523,43477
+Providence,Violet,14.0002874802357,female,oh so pretty,1,0,0,0,1,17602943,336,21,23523,43477
+Providence,Violet,14.0002874802357,female,your pretty pretty,2,2,2,0,0,17602944,336,21,23523,43477
+Providence,Violet,15.8545350007187,female,and let's see the really ha uh and there's where she makes a pretty spider web,1,0,0,0,0,17605024,336,21,23523,43481
+Providence,Violet,14.4602558574098,female,huh look at the pretty pretty snowflakes,2,0,0,0,0,17605066,336,21,23523,43479
+Providence,Violet,14.4602558574098,female,two shoes new shoes pretty and white,1,0,0,0,0,17605837,336,21,23523,43479
+Providence,Violet,16.2303127374279,female,oh is that pretty now we gotta figure this out,1,0,0,0,0,17608202,336,21,23523,43482
+Providence,Violet,16.6574262305181,female,here's her pretty dress,1,0,1,0,0,17609080,336,21,23523,43483
+Providence,Violet,16.2303127374279,female,where's your pretty belly,1,1,1,0,0,17609376,336,21,23523,43482
+Providence,Violet,16.2303127374279,female,where's your pretty,1,1,1,0,0,17609380,336,21,23523,43482
+Providence,Violet,17.6574467648206,female,that's okay it's a pretty one,1,0,0,0,1,17612300,336,21,23523,43484
+Providence,Violet,18.5917575309555,female,the pretty baby,1,0,0,0,1,17612926,336,21,23523,43487
+Providence,Violet,18.5917575309555,female,that the pretty girl,1,0,1,0,0,17612932,336,21,23523,43487
+Providence,Violet,19.1318096880839,female,look at this pretty one you get to wear,1,0,0,0,0,17613176,336,21,23523,43488
+Providence,Violet,17.6574467648206,female,oh it's so pretty,1,0,0,0,1,17613263,336,21,23523,43484
+Providence,Violet,18.5917575309555,female,pretty pretty flower,2,0,0,0,0,17613797,336,21,23523,43487
+Providence,Violet,21.8218033224502,female,xxx xxx xxx you're a pretty girl,1,1,1,0,0,17618237,336,21,23523,43494
+Providence,Violet,19.7231976015935,female,that's a pretty,1,0,0,0,1,17619509,336,21,23523,43489
+Providence,Violet,19.7231976015935,female,it's pretty Violet,1,0,0,0,0,17619524,336,21,23523,43489
+Providence,Violet,22.8875336249204,female,what a pretty butterfly huh,1,0,0,0,0,17620032,336,21,23523,43495
+Providence,Violet,22.3947103636625,female,mm ya like that pretty princess one,1,0,1,0,0,17622410,336,21,23523,43493
+Providence,Violet,23.9204090433068,female,with her pretty flower pots,1,0,0,0,0,17623937,336,21,23523,43497
+Providence,Violet,25.3290621984024,female,is that pretty kitty,1,0,0,0,0,17624460,336,21,23523,43500
+Providence,Violet,22.8875336249204,female,who painted these pretty toes,1,0,0,0,0,17627014,336,21,23523,43495
+Providence,Violet,23.9204090433068,female,with her pretty flower pots,1,0,0,0,0,17628238,336,21,23523,43497
+Providence,Violet,20.723218135896,female,it's a pretty bird,1,0,0,0,0,17628405,336,21,23523,43491
+Providence,Violet,24.8875746935255,female,it's such pretty hair,1,0,0,0,0,17628702,336,21,23523,43499
+Providence,Violet,23.4932955502166,female,okay let's put this pretty orange,1,0,0,0,0,17629721,336,21,23523,43496
+Providence,Violet,20.1646851064704,female,let's make her wear the pretty skirt,1,0,1,0,0,17630742,336,21,23523,43490
+Providence,Violet,20.1646851064704,female,you made a pretty house,1,0,0,0,0,17632966,336,21,23523,43490
+Providence,Violet,20.1646851064704,female,a pretty house yeah,1,0,0,0,0,17632997,336,21,23523,43490
+Providence,Violet,20.1646851064704,female,make another pretty house,1,0,0,0,0,17633324,336,21,23523,43490
+Providence,Violet,20.1646851064704,female,pretty house,1,0,0,0,0,17633386,336,21,23523,43490
+Providence,Violet,20.1646851064704,female,oh it's a very pretty house xxx,1,0,0,0,0,17633449,336,21,23523,43490
+Providence,Violet,20.1646851064704,female,very pretty house,1,0,0,0,0,17633469,336,21,23523,43490
+Providence,Violet,20.1646851064704,female,well I'm glad you made a pretty house,1,0,0,0,0,17633593,336,21,23523,43490
+Providence,Violet,23.4932955502166,female,that's pretty good,0,0,0,0,0,17634840,336,21,23523,43496
+Providence,Violet,24.4276063163515,female,pretty mask,1,0,0,0,0,17635023,336,21,23523,43498
+Providence,Violet,17.098913735395,female,little goldfish hide so well put them in this pretty shell,1,0,0,0,0,17635866,336,21,23523,43485
+Providence,Violet,17.098913735395,female,and a pretty necklace,1,0,0,0,0,17637108,336,21,23523,43485
+Providence,Violet,26.3619376167888,female,do you wanna wear a pretty christmas dress,1,0,1,0,0,17639083,336,21,23523,43502
+Providence,Violet,33.2635167046551,female,here's the pretty dress,1,0,0,0,0,17642174,336,21,23523,43515
+Providence,Violet,33.2635167046551,female,hm whose pretty undies are these ones,1,0,0,0,0,17642484,336,21,23523,43515
+Providence,Violet,27.6247972237623,female,pretty huh,1,0,0,0,1,17643277,336,21,23523,43505
+Providence,Violet,27.1648288465882,female,pretty cool though huh,0,0,0,0,0,17643827,336,21,23523,43503
+Providence,Violet,24.4276063163515,female,xxx pretty red hair,1,0,0,0,0,17644431,336,21,23523,43498
+Providence,Violet,25.6247561551572,female,ooh pretty star,1,0,0,0,0,17646449,336,21,23523,43501
+Providence,Violet,24.4276063163515,female,that's pretty good,0,0,0,0,0,17646526,336,21,23523,43498
+Providence,Violet,29.8876773650383,female,see pretty huh,1,0,0,0,1,17648456,336,21,23523,43508
+Providence,Violet,29.8876773650383,female,pretty huh,1,0,0,0,1,17653445,336,21,23523,43508
+Providence,Violet,29.493418756032,female,it's pretty huh,1,0,0,0,1,17658060,336,21,23523,43507
+Providence,Violet,32.6248998952751,female,I think I'm pretty open let me just check,0,0,0,0,0,17660423,336,21,23523,43514
+Providence,Violet,34.9206349206349,female,it came out pretty good huh,0,0,0,0,0,17662490,336,21,23523,43518
+Providence,Violet,32.2306412862687,female,that's a pretty one huh,1,0,0,0,1,17670892,336,21,23523,43513
+Providence,Violet,34.0664079344545,female,pretty good huh,0,0,0,0,0,17672440,336,21,23523,43516
+Providence,Violet,34.0664079344545,female,pretty cool huh,0,0,0,0,0,17675287,336,21,23523,43516
+Gleason,William,26.5262120372082,male,very pretty isn't it,1,0,0,0,1,1061552,49,2,2630,4990
+Providence,William,16.8874104191051,male,it's pretty isn't it,1,0,0,0,1,17660941,336,21,23532,43530
+Providence,William,23.0004722889587,male,oh I see you got the raisins that was pretty good,0,0,0,0,0,17666715,336,21,23532,43541
+Providence,William,23.0004722889587,male,that was pretty good William,0,0,0,0,0,17666718,336,21,23532,43541
+Providence,William,18.6246124150393,male,you know just by looking at the picture that's pretty good William,0,0,0,0,0,17673548,336,21,23532,43533
+Providence,William,21.3946898293599,male,it's so pretty,1,0,0,0,1,17674968,336,21,23532,43539
+Providence,William,21.3946898293599,male,it's very pretty it's very nice,1,0,0,0,1,17675108,336,21,23532,43539
+Providence,William,16.3945871578472,male,this is pretty permanent this one I usually just keep up but,0,0,0,0,0,17678647,336,21,23532,43531
+Providence,William,23.4932955502166,male,that's pretty good no,0,0,0,0,0,17680883,336,21,23532,43543
+Providence,William,20.0661204542188,male,that's pretty good though,0,0,0,0,0,17681478,336,21,23532,43536
+Providence,William,23.4932955502166,male,he's pretty,1,0,0,1,0,17682173,336,21,23532,43543
+Providence,William,26.6904864576275,male,xxx pretty good,0,0,0,0,0,17689582,336,21,23532,43549
+Providence,William,26.6904864576275,male,yeah that's pretty interesting,0,0,0,0,0,17692726,336,21,23532,43549
+Providence,William,29.953387133206,male,look at this pretty picture should we put this up on the refrigerator,1,0,0,0,0,17700450,336,21,23532,43556
+Providence,William,31.8548635495595,male,alright I think I think we have a pretty clean table,0,0,0,0,0,17718026,336,21,23532,43560
+Providence,William,27.230538614756,male,yeah the tree's a pretty tree isn't it,1,0,0,0,0,17740194,336,21,23532,43550

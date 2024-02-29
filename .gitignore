@@ -8,9 +8,19 @@ localonly/
 # Ignore specific file types
 *.log
 *.tmp
+*.fff
+*.ttt
+*.tex
 
 # Ignore a specific file
 /Users/katia/Desktop/D2M/CHILDES_utterance/r-references.bib
+/Users/katia/Desktop/D2M/CHILDES_utterance/Thesis data prep.Rmd
+/Users/katia/Desktop/D2M/CHILDES_utterance/Providence_example.Rmd
+/Users/katia/Desktop/D2M/CHILDES_utterance/4-6 yrs old.Rmd
+/Users/katia/Desktop/D2M/CHILDES_utterance/My-Notebook.tex
+/Users/katia/Desktop/D2M/CHILDES_utterance/apa7
+/Users/katia/Desktop/D2M/CHILDES_utterance/My-Notebook_files
+/Users/katia/Desktop/D2M/CHILDES_utterance/course data
 
 # Session Data files
 .RData

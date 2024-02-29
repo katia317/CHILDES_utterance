@@ -182,7 +182,7 @@ write.csv(wadj_friendly, file = "wadj_friendly.csv", row.names = FALSE)
 ## pretty
 adj_pretty <- adj_utterance %>% 
   filter(grepl("pretty", gloss))
-write.csv(adj_pretty, "/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj./Pretty.csv", row.names = FALSE)
+write.csv(adj_pretty, "/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/adj./id_Pretty.csv", row.names = FALSE)
 
 ## look good
 adj_lookgood <- adj_utterance %>% 
@@ -356,6 +356,24 @@ grouped_adj_number <- filtered_appearance %>%
 
 write.csv(grouped_adj_number, '/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/without_pretty_adj_number.csv', row.names = FALSE)
 
+# Competence-adj count
+com_adj <- c("clever","brilliant","smart","strong")
+filtered_competence <- appearance_adj_number %>% 
+  filter(sapply(com_adj, function(word) grepl(word, gloss, ignore.case = TRUE)) %>% rowSums() > 0)
+
+competence_adj_number <- filtered_competence %>%
+  group_by(target_child_name) %>%
+  summarise(competence_count = n())
+
+adj_number <- read.csv("/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/adj_proportion_number.csv")
+adj_number <- left_join(adj_number, competence_adj_number, by = "target_child_name")
+
+adj_proportion <- adj_number %>%
+  mutate(com_proportion = competence_count / utt_count)
+
+write.csv(adj_proportion, '/Users/katia/Desktop/D2M/CHILDES_utterance/Childes dataset/Proportion data/all_adj_proportion.csv', row.names = FALSE)
+
+
 
 # PLOT
 library(ggplot2)
@@ -434,7 +452,7 @@ pro_utterance_number <- pro_utterance %>%
 
 pro_utterance_number <- left_join(pro_utterance_number, pro_adj_number, by = "target_child_name")
 
-# *NEW* Filter gloss that contains the specified Gender-Biased Nouns
+# Filter gloss that contains the specified Gender-Biased Nouns
 # 1. male-biased nouns
 mnoun_words <- c("broom", "firetruck", "truck", "train", "hammer", "motorcycle", "shovel")
 pro_mnoun <- pro_utterance %>% 

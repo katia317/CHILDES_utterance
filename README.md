@@ -7,21 +7,25 @@ output:
 Class (public) repo for Data to Manuscript in R
 
 ## Dataset Description
-This dataset comes from the Phonbank English Providence Corpus from 2002-2005 by Katherine Demuth and her research assistants at Brown University. (https://phon.talkbank.org/access/Eng-NA/Providence.html)   
-  The section I selected contains utterances from longitudinal audio/video transcripts of 6 monolingual English-speaking children’s language development from 1-3 years during spontaneous interactions with their parents (usually their mothers) at home. The participants included 3 boys (Alex, Ethan, William) and 3 girls (Lily, Naima, Violet). Each child was recorded for 1 hour every 2 weeks beginning at the onset of first words. 
+This dataset contains transcripts of 6 corpuses (Providence, Warren, Gleason, MeCune, VanHouten and Weist) selected from the *CHILDES* database, which record naturalistic conversations between 58 monolingual Native English-speaking children (1-3 years old) and their mothers. 
 
 ## Planned Project 
-*Temporary, may be changed in future*  
-**Research Question**: It is expected that mothers will employ more nouns linked to female stereotypes and warmth-based adjectives when addressing female infants compared to male infants.  
-Gender-biased noun. Nouns extracted from the two lists “Top 10 most female/male biased words in English (America) for comprehension data” of the Wordbank data report (2016) will be treated as gender-biased language data.  
-Competence and warmth adjectives. Based on the SCM’s categorization (2008), warmth scales include “good‐natured”, “trustworthy”, “tolerant”, “friendly”, and “sincere”, whereas competence scales include “capable”, “skillful”, “intelligent”, and “confident”.
+
+**Research Question**: It is expected that mothers will employ more female-biased nouns and appearance-related adjectives when addressing female infants compared to male infants, and employ more male-biased nouns and competence-related adjectives when addressing male infants.
+
+$Gender-biased nouns$: 14 Nouns (7 for each gender) extracted from the two lists “Top 10 most female/male biased words in English (America) for comprehension data” of the Wordbank data report (2016) will be treated as gender-biased language data.  
+
+$Appearance-related adjectives$: "beautiful","cute","gorgeous","handsome","lovely","pretty" 
+
+$Competence-related adjectives$: "clever","brilliant","smart","strong"
+
 
 ## File Tree
 ```
---[Providence-Utterances] 
+--[CHILDES-Utterances] 
    -- README.md 
    -- .gitignore
-   -- My_Notebook.Rmd
+   -- My Notebook.Rmd
 -- scripts   
    -- My_Script.R  
 -- data  
